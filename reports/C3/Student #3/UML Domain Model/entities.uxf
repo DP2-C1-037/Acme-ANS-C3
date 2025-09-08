@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>112</x>
+      <y>406</y>
+      <w>609</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+ActivityLog {ValidActivityLog}
+--
++ registrationMoment: Date {Mandatory, ValidMoment(past = true, max = "2201/01/01 00:00:00"), Temporal(TemporalType.TIMESTAMP)}
++ typeOfIncident: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
++ description: String {Mandatory, ValidLongText, Automapped}
++ severityLevel: Integer {Mandatory, ValidNumber(min = 0, max = 10), Automapped}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1015</x>
+      <y>252</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
+FlightCrewMember
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>126</x>
+      <y>224</y>
+      <w>588</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+FlightAssignment
+--
++ flightCrewDuty: FlightCrewDuty {Mandatory, Valid, Automapped}
++ lastUpdateMoment: Date {Mandatory, ValidMoment(past = true, min = "2000/01/01 00:00"), Temporal(TemporalType.TIMESTAMP)}
++ status: AssignmentStatus {Mandatory, Valid, Automapped}
++ remarks: String {Optional, ValidString(min = 0, max = 255), Automapped}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>301</y>
+      <w>77</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Belongs to ^
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>707</x>
+      <y>259</y>
+      <w>322</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Is assigned to &gt;
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>440.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1057</x>
+      <y>119</y>
+      <w>70</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>Works for ^
+lt=&lt;-x
+m1=1
+m2=1
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1022</x>
+      <y>91</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airline
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>91</y>
+      <w>77</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Leg
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>413</x>
+      <y>119</y>
+      <w>77</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>Belongs to ^
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>812</x>
+      <y>336</y>
+      <w>357</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+VisaRequirement
+--
++ passportOf: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
++ passportCode: String {Mandatory, ValidString(min = 2, max = 2), Automapped}
++ destination: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
++ passValid: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
++ exceptText: String {Optional, ValidString(min = 0, max = 255), Automapped}
++ visa: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
++ stayOf: String {Optional, ValidString(min = 0, max = 255), Automapped}
++ link: String {Mandatory, ValidUrl, Automapped}
++ error: Boolean {Mandatory, Valid, Automapped}
++ color: String {Mandatory, ValidString(min = 1, max = 10), Automapped}
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
