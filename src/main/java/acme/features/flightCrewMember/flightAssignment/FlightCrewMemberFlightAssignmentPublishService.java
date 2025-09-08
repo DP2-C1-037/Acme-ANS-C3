@@ -110,11 +110,11 @@ public class FlightCrewMemberFlightAssignmentPublishService extends AbstractGuiS
 	}
 
 	private void validateLegCompatibility(final FlightAssignment assignment) {
-		Collection<Leg> existingLegs = this.repository.findLegsByFlightCrewMemberId(assignment.getFlightCrewMember().getId());
+		Collection<FlightAssignment> myAssignments = this.repository.findFlightAssignmentsByFlightCrewMemberId(assignment.getFlightCrewMember().getId());
 
-		boolean hasIncompatibleLeg = existingLegs.stream().anyMatch(existingLeg -> this.legIsNotOverlapping(assignment.getLeg(), existingLeg));
+		boolean hasOverlappingLeg = myAssignments.stream().filter(existing -> existing.getId() != assignment.getId()).map(FlightAssignment::getLeg).anyMatch(existingLeg -> this.legIsNotOverlapping(assignment.getLeg(), existingLeg));
 
-		if (hasIncompatibleLeg)
+		if (hasOverlappingLeg)
 			super.state(false, "*", "acme.validation.flight-assignment.member-with-overlapping-legs.message");
 	}
 
@@ -129,9 +129,12 @@ public class FlightCrewMemberFlightAssignmentPublishService extends AbstractGuiS
 	}
 
 	private boolean legIsNotOverlapping(final Leg newLeg, final Leg existingLeg) {
-		boolean isDepartureOverlapping = MomentHelper.isInRange(newLeg.getScheduledDeparture(), existingLeg.getScheduledDeparture(), existingLeg.getScheduledArrival());
-		boolean isArrivalOverlapping = MomentHelper.isInRange(newLeg.getScheduledArrival(), existingLeg.getScheduledDeparture(), existingLeg.getScheduledArrival());
-		return isDepartureOverlapping && isArrivalOverlapping;
+		Date newDeparture = newLeg.getScheduledDeparture();
+		Date newArrival = newLeg.getScheduledArrival();
+		Date existingDeparture = existingLeg.getScheduledDeparture();
+		Date existingArrival = existingLeg.getScheduledArrival();
+
+		return MomentHelper.isBefore(newDeparture, existingArrival) && MomentHelper.isAfter(newArrival, existingDeparture);
 	}
 
 	@Override
