@@ -1,0 +1,17 @@
+customer.customer-dashboard.form.title = Customer Dashboard
+
+customer.dashboard.form.title.general-indicators = Statistics about published bookings
+
+customer.dashboard.form.label.last-five-destinations = Last five destinations
+customer.dashboard.form.label.last-year-money-spent-in-bookings = Money spent in bookings during last year
+customer.dashboard.form.label.number-of-bookings-by-travel-class = Number of bookings grouped by travel class
+customer.dashboard.form.label.last-five-years-booking-costs-count = Count of the cost of all bookings in the last five years
+customer.dashboard.form.label.last-five-years-booking-costs-average = Average of the cost of all bookings in the last five years
+customer.dashboard.form.label.last-five-years-booking-costs-minimum = Minimum of the cost of all bookings in the last five years
+customer.dashboard.form.label.last-five-years-booking-costs-maximum = Maximum of the cost of all bookings in the last five years
+customer.dashboard.form.label.last-five-years-booking-costs-standard-deviation = Standard deviation of the cost of all bookings in the last five years
+customer.dashboard.form.label.bookings-number-of-passengers-count = Count of the number of passengers in all bookings
+customer.dashboard.form.label.bookings-number-of-passengers-average = Average of the number of passengers in all bookings
+customer.dashboard.form.label.bookings-number-of-passengers-minimum = Minimum of the number of passengers in all bookings
+customer.dashboard.form.label.bookings-number-of-passengers-maximum = Maximum of the number of passengers in all bookings
+customer.dashboard.form.label.bookings-number-of-passengers-standard-deviation = Standard deviation of the number of passengers in all bookings

@@ -1,0 +1,24 @@
+airline-manager.flight.form.title = Flight details
+airline-manager.flight.list.title = My flights 
+
+airline-manager.flight.form.label.tag = Tag:
+airline-manager.flight.form.label.requiresSelfTransfer = Requires self transfer:
+airline-manager.flight.form.label.cost = Cost:
+airline-manager.flight.form.label.description = Description: (Optional)
+airline-manager.flight.form.label.scheduledDeparture = Scheduled Departure:
+airline-manager.flight.form.label.scheduledArrival = Scheduled Arrival:
+airline-manager.flight.form.label.originCity = Origin City:
+airline-manager.flight.form.label.destinationCity = Destination City:
+airline-manager.flight.form.label.layovers = Layovers:
+
+airlineManager.flight.form.button.legs = Legs
+airlineManager.flight.form.button.update = Update
+airlineManager.flight.form.button.delete = Delete
+airlineManager.flight.form.button.publish = Publish
+airline-manager.flight.form.button.create = Create
+
+airline-manager.flight.list.label.tag = Tag
+airline-manager.flight.list.label.requiresSelfTransfer = Requires self transfer
+airline-manager.flight.list.label.cost = Cost
+
+airline-manager.flight.list.button.create = Create

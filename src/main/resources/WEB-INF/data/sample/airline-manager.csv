@@ -1,0 +1,39 @@
+key,identifierNumber,experienceYears,birthDate,pictureLink,key:userAccount,key:airline
+
+# Base entities
+airline-manager-01,JD123456,50,2022/09/01 10:00,http://lorem.com/ipsum,user-account-airline-manager-01,airline-01
+airline-manager-02,JSX123456,50,2022/09/01 10:00,http://lorem.com/ipsum,user-account-airline-manager-02,airline-01
+
+# identifierNumber - standard variations
+# Done in base entities
+
+# experienceYears - standard variations
+airline-manager-03,JD123458,0,2022/09/01 10:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+airline-manager-04,JD123459,1,2022/09/01 10:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+airline-manager-05,JD123460,100,2022/09/01 10:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+airline-manager-06,JD123461,99,2022/09/01 10:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+
+# birthDate - standard variations
+airline-manager-09,JD123464,100,2000/01/01 00:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+airline-manager-10,JD123465,99,2000/01/01 00:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+airline-manager-07,JD123462,0,2025/01/01 00:00,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+airline-manager-08,JD123463,1,2024/12/31 23:59,http://lorem.com/ipsum,user-account-airline-manager-03,airline-01
+
+# pictureLink - standard variations
+airline-manager-11,JD123466,50,2022/09/01 10:00,http://a.b,user-account-airline-manager-03,airline-01
+airline-manager-12,JD123467,50,2022/09/01 10:00,http://www.lorem-ipsum.org/dolor/sit/amet/consectetur/adipiscing/elit/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/,user-account-airline-manager-03,airline-01
+airline-manager-13,JD123468,50,2022/09/01 10:00,http://www.lorem-ipsum.org/dolor/sit/amet/consectetur/adipiscing/elit/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/,user-account-airline-manager-03,airline-01
+airline-manager-14,JD123469,50,2022/09/01 10:00,http://www.lorem-ipsum.org/dolor/sit/amet/consectetur/adipiscing/elit/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X,user-account-airline-manager-03,airline-01
+airline-manager-15,JD123470,50,2022/09/01 10:00,https://www.lorem-ipsum.org,user-account-airline-manager-03,airline-01
+airline-manager-16,JD123471,50,2022/09/01 10:00,http://www.lorem-ipsum.org,user-account-airline-manager-03,airline-01
+airline-manager-17,JD123472,50,2022/09/01 10:00,http://www.lorem-ipsum.org/dolor/sit.html,user-account-airline-manager-03,airline-01
+airline-manager-18,JD123473,50,2022/09/01 10:00,http://www.lorem-ipsum.org/dolor/sit.html#dolor,user-account-airline-manager-03,airline-01
+airline-manager-19,JD123474,50,2022/09/01 10:00,http://example.org?a=1&b=2,user-account-airline-manager-03,airline-01
+airline-manager-20,JD123475,50,2022/09/01 10:00,http://example.org?,user-account-airline-manager-03,airline-01
+airline-manager-21,JD123476,50,2022/09/01 10:00,http://example.org?a,user-account-airline-manager-03,airline-01
+airline-manager-22,JD123477,50,2022/09/01 10:00,http://example.org?a&b,user-account-airline-manager-03,airline-01
+airline-manager-23,JD123478,50,2022/09/01 10:00,http://example.org/,user-account-airline-manager-03,airline-01
+airline-manager-24,JD123479,50,2022/09/01 10:00,http://example.org/a,user-account-airline-manager-03,airline-01
+airline-manager-25,JD123480,50,2022/09/01 10:00,http://example.org/a/b,user-account-airline-manager-03,airline-01
+airline-manager-26,JD123481,50,2022/09/01 10:00,http://example.org/a/b?,user-account-airline-manager-03,airline-01
+airline-manager-27,JD123482,50,2022/09/01 10:00,http://example.org/a/b?a&b,user-account-airline-manager-03,airline-01

@@ -1,0 +1,24 @@
+customer.booking.form.title = Booking form 
+
+customer.booking.form.label.locator-code = Locator code:
+customer.booking.form.label.purchase-moment = Purchase moment:
+customer.booking.form.label.travel-class = Travel class:
+customer.booking.form.label.price = Price:
+customer.booking.form.label.last-nibble = Credit card last nibble:
+customer.booking.form.label.flight = Flight:
+customer.booking.form.label.draft-mode = Is it in draft mode?
+
+customer.booking.form.button.create = Create
+customer.booking.form.button.update = Update
+customer.booking.form.button.delete = Delete
+customer.booking.form.button.publish = Publish
+
+customer.booking.list.title = Listing of bookings
+
+customer.booking.list.label.locator-code = Locator code
+customer.booking.list.label.purchase-moment = Purchase moment
+customer.booking.list.label.travel-class = Travel class
+customer.booking.list.label.price = Price
+
+customer.booking.list.button.create = Create
+customer.booking.form.button.passengers = Passengers

@@ -1,0 +1,20 @@
+customer.assigned-to.form.title = Booking assignation form 
+
+customer.assigned-to.list.title = Listing of booking assignations
+
+customer.assigned-to.list.label.passport-number = Passport number
+customer.assigned-to.list.label.full-name = Full name
+customer.assigned-to.list.label.email = Email
+
+customer.assigned-to.list.button.add = Add
+
+customer.assigned-to.form.label.full-name = Full name:
+customer.assigned-to.form.label.email = Email:
+customer.assigned-to.form.label.passport-number = Passport number:
+customer.assigned-to.form.label.birth-date = Birth date:
+customer.assigned-to.form.label.special-needs = Special needs:
+
+customer.assigned-to.form.button.add = Add
+customer.assigned-to.form.button.delete = Delete
+
+

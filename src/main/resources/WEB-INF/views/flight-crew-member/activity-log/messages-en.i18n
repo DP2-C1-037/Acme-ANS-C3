@@ -1,0 +1,18 @@
+flight-crew-member.activity-log.form.title = Activity log details
+flight-crew-member.activity-log.list.title = Listing of activity logs
+
+flight-crew-member.activity-log.form.label.registration-moment = Registration moment:
+flight-crew-member.activity-log.form.label.type-of-incident = Incident type:
+flight-crew-member.activity-log.form.label.severity-level = Severity level:
+flight-crew-member.activity-log.form.label.description = Description:
+
+flight-crew-member.activity-log.form.button.create = Create
+flight-crew-member.activity-log.form.button.update = Update
+flight-crew-member.activity-log.form.button.delete = Delete
+flight-crew-member.activity-log.form.button.publish = Publish
+
+flight-crew-member.activity-log.list.label.flight-number = Flight Number:
+flight-crew-member.activity-log.list.label.type-of-incident = Incident type:
+flight-crew-member.activity-log.list.label.severity-level = Severity level:
+
+flight-crew-member.activity-log.list.button.create = Create

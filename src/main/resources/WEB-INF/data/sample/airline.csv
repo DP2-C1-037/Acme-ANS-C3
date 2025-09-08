@@ -1,0 +1,65 @@
+key,name,iataCode,website,type,foundationMoment,email,phoneNumber
+
+# Base entity
+airline-01,Lorem ipsum dolor sit amet,SHX,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+
+# name - standard variations
+airline-02,L,ABC,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-03,Lo,DEF,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-04,Lorem ipsum dolor sit amet consectetur adipiscin,GHI,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-05,Lorem ipsum dolor sit amet consectetur adipiscing ,JKL,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-06,โลเร็ม อิปซัม,MNQ,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-07,لوريم إيبسوم,OPQ,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-08,洛伦·伊普森,RST,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-09,<marquee>Hacked</marquee>,UWX,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-10,<script>alert(‘Hacked!’);</script>,YZX,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-11,' or 'A' = 'A,QWX,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+
+# iataCode - standard variations
+airline-12,Lorem ipsum dolor sit amet,AAA,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-13,Lorem ipsum dolor sit amet,AAX,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-14,Lorem ipsum dolor sit amet,ZZX,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-15,Lorem ipsum dolor sit amet,ZZZ,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+
+# website - standard variations
+airline-16,Lorem ipsum dolor sit amet,QWE,http://b.aa,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-17,Lorem ipsum dolor sit amet,RTY,http://a.b,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-18,Lorem ipsum dolor sit amet,UIO,http://www.lorem-ipsum.org/dolor/sit/amet/consectetur/adipiscing/elit/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-19,Lorem ipsum dolor sit amet,PAS,http://www.lorem-ipsum.org/dolor/sit/amet/consectetur/adipiscing/elit/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-20,Lorem ipsum dolor sit amet,ASD,https://www.lorem-ipsum.org,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-21,Lorem ipsum dolor sit amet,FGH,http://www.lorem-ipsum.org,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-22,Lorem ipsum dolor sit amet,JKX,http://www.lorem-ipsum.org/dolor/sit.html,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-23,Lorem ipsum dolor sit amet,HZX,http://www.lorem-ipsum.org/dolor/sit.html#dolor,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-24,Lorem ipsum dolor sit amet,CVB,http://example.org?a=1&b=2,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-25,Lorem ipsum dolor sit amet,NMN,http://example.org?,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-26,Lorem ipsum dolor sit amet,QQQ,http://example.org?a,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-27,Lorem ipsum dolor sit amet,WWW,http://example.org?a&b,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-28,Lorem ipsum dolor sit amet,EEE,http://example.org/,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-29,Lorem ipsum dolor sit amet,RRR,http://example.org/a,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-30,Lorem ipsum dolor sit amet,TTT,http://example.org/a/b,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-31,Lorem ipsum dolor sit amet,YYY,http://example.org/a/b?,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-32,Lorem ipsum dolor sit amet,UUU,http://example.org/a/b?a&b,LUXURY,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+
+# type - standard variations
+airline-33,Lorem ipsum dolor sit amet,III,http://lorem.com/ipsum,STANDARD,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+airline-34,Lorem ipsum dolor sit amet,OOO,http://lorem.com/ipsum,LOW_COST,2012/07/02 00:00,acme@lorem-ipsum.org,34640103529
+
+# foundationMoment - standard variations
+airline-35,Lorem ipsum dolor sit amet,PPP,http://lorem.com/ipsum,LUXURY,2000/01/01 00:00,acme@lorem-ipsum.org,34640103529
+airline-36,Lorem ipsum dolor sit amet,SSS,http://lorem.com/ipsum,LUXURY,2000/01/01 00:01,acme@lorem-ipsum.org,34640103529
+airline-37,Lorem ipsum dolor sit amet,DDD,http://lorem.com/ipsum,LUXURY,2024/12/31 23:59,acme@lorem-ipsum.org,34640103529
+airline-38,Lorem ipsum dolor sit amet,FFF,http://lorem.com/ipsum,LUXURY,2025/01/01 00:00,acme@lorem-ipsum.org,34640103529
+
+# email - standard variations
+airline-39,Lorem ipsum dolor sit amet,LLL,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,acmepassword@lorem-ipsum.org,34640103529
+airline-40,Lorem ipsum dolor sit amet,IRA,http://lorem.com/ipsum,LUXURY,2012/07/02 00:00,a@b.e,34640103529
+airline-41,Lorem ipsum dolor sit amet,ZZA,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,a@b.es,34640103529
+airline-42,Lorem ipsum dolor sit amet,XXX,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,a@b.esx,34640103529
+airline-43,Lorem ipsum dolor sit amet,CCC,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,34640103529
+airline-44,Lorem ipsum dolor sit amet,VVV,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,34640103529
+
+# phoneNumber - standard variations
+airline-45,Lorem ipsum dolor sit amet,BBB,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,acme@lorem-ipsum.org,346401035291234
+airline-46,Lorem ipsum dolor sit amet,NNQ,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,acme@lorem-ipsum.org,+346401035291234
+airline-47,Lorem ipsum dolor sit amet,MMM,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,acme@lorem-ipsum.org,123456
+airline-48,Lorem ipsum dolor sit amet,SRR,http://lorem.com/ipsum,LUXURY,2012/07/02 0:00,acme@lorem-ipsum.org,+123456

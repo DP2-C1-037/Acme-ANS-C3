@@ -1,0 +1,17 @@
+customer.customer-dashboard.form.title = Panel del cliente
+
+customer.dashboard.form.title.general-indicators = Estadísticas sobre reservas publicadas
+
+customer.dashboard.form.label.last-five-destinations = Últimos cinco destinos
+customer.dashboard.form.label.last-year-money-spent-in-bookings = Dinero gastado en reservas a lo largo del último año
+customer.dashboard.form.label.number-of-bookings-by-travel-class = Número de reservas agrupadas por clase de viaje
+customer.dashboard.form.label.last-five-years-booking-costs-count = Suma de los costes de las reservas de los últimos cinco años
+customer.dashboard.form.label.last-five-years-booking-costs-average = Media de los costes de las reservas de los últimos cinco años
+customer.dashboard.form.label.last-five-years-booking-costs-minimum = Mínimo de los costes de las reservas de los últimos cinco años
+customer.dashboard.form.label.last-five-years-booking-costs-maximum = Máximo de los costes de las reservas de los últimos cinco años
+customer.dashboard.form.label.last-five-years-booking-costs-standard-deviation = Desviación estándar de los costes de las reservas de los últimos cinco años
+customer.dashboard.form.label.bookings-number-of-passengers-count = Suma de los números de pasajeros de todas las reservas
+customer.dashboard.form.label.bookings-number-of-passengers-average = Media de los números de pasajeros de todas las reservas
+customer.dashboard.form.label.bookings-number-of-passengers-minimum = Mínimo de los números de pasajeros de todas las reservas
+customer.dashboard.form.label.bookings-number-of-passengers-maximum = Máximo de los números de pasajeros de todas las reservas
+customer.dashboard.form.label.bookings-number-of-passengers-standard-deviation = Desviación estándar de los números de pasajeros de todas las reservas

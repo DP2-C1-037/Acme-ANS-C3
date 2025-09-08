@@ -1,0 +1,41 @@
+key,flightNumber,scheduledDeparture,scheduledArrival,status,draftMode,key:flight,key:departureAirport,key:arrivalAirport,key:aircraft
+# Base entity
+leg-01,SHX0001,2100/07/02 00:00,2100/07/02 00:01,ON_TIME,true,flight-01,airport-01,airport-14,aircraft-01
+
+# flightNumber does not have any standard variations
+
+# draftMode - standard variations
+leg-02,SHX0002,2100/07/02 00:00,2100/07/02 00:01,ON_TIME,false,flight-16,airport-02,airport-15,aircraft-02
+
+# scheduledDeparture - standard variations
+leg-03,SHX0003,2000/01/01 00:00,2000/01/01 00:01,ON_TIME,true,flight-02,airport-03,airport-16,aircraft-03
+leg-04,SHX0004,2000/01/01 00:01,2100/07/02 00:02,ON_TIME,true,flight-03,airport-04,airport-17,aircraft-04
+leg-05,SHX0005,2200/12/31 23:59,2201/01/01 00:00,ON_TIME,true,flight-04,airport-05,airport-18,aircraft-05
+
+# scheduledArrival - standard variations
+leg-06,SHX0006,2000/01/01 00:02,2000/01/01 00:03,ON_TIME,true,flight-05,airport-06,airport-19,aircraft-06
+leg-07,SHX0007,2000/01/01 00:03,2000/01/01 00:04,ON_TIME,true,flight-06,airport-07,airport-20,aircraft-07
+leg-08,SHX0008,2100/07/02 00:01,2200/12/31 23:59,ON_TIME,true,flight-07,airport-08,airport-21,aircraft-08
+leg-09,SHX0009,2100/07/02 00:02,2201/01/01 00:00,ON_TIME,true,flight-08,airport-09,airport-22,aircraft-09
+
+# status - standard variations
+leg-10,SHX0010,2100/07/02 00:03,2100/07/02 00:04,DELAYED,true,flight-09,airport-10,airport-23,aircraft-10
+leg-11,SHX0011,2100/07/02 00:04,2100/07/02 00:05,CANCELLED,true,flight-10,airport-11,airport-24,aircraft-11
+leg-12,SHX0012,2100/07/02 00:05,2100/07/02 00:06,ON_TIME,true,flight-11,airport-12,airport-25,aircraft-12
+leg-13,SHX0013,2100/07/02 00:06,2100/07/02 00:07,LANDED,true,flight-12,airport-13,airport-26,aircraft-13
+
+# extra para pruebas
+leg-14,SHX0014,2025/02/02 04:00,2025/02/02 10:00,ON_TIME,true,flight-17,airport-01,airport-14,aircraft-01
+leg-15,SHX0015,2025/02/02 11:00,2025/02/02 14:00,ON_TIME,false,flight-17,airport-14,airport-09,aircraft-01
+
+leg-16,SHX0016,2025/02/02 04:00,2025/02/02 10:00,ON_TIME,false,flight-18,airport-04,airport-15,aircraft-02
+
+leg-17,SHX0017,2025/02/02 4:00,2025/02/02 10:00,ON_TIME,true,flight-20,airport-08,airport-10,aircraft-05
+leg-18,SHX0018,2025/02/02 11:00,2025/02/02 14:00,ON_TIME,true,flight-20,airport-10,airport-32,aircraft-05
+
+leg-19,SHX0019,2025/02/02 04:00,2025/02/02 10:00,ON_TIME,false,flight-21,airport-15,airport-17,aircraft-06
+leg-20,SHX0020,2025/02/02 11:00,2025/02/02 14:00,ON_TIME,false,flight-21,airport-17,airport-25,aircraft-06
+
+leg-21,SHX0021,2025/02/02 04:00,2025/02/02 10:00,ON_TIME,false,flight-22,airport-05,airport-02,aircraft-42
+
+leg-22,SHX0022,2000/01/01 00:04,2000/01/01 00:05,ON_TIME,false,flight-05,airport-19,airport-01,aircraft-01

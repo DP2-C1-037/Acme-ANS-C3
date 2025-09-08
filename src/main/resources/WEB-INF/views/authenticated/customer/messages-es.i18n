@@ -1,0 +1,9 @@
+authenticated.customer.form.title = Detalles de cliente
+
+authenticated.customer.form.label.identifier = Identificador
+authenticated.customer.form.label.phone-number = Número de teléfono
+authenticated.customer.form.label.physical-address = Dirección física
+authenticated.customer.form.label.city = Ciudad
+authenticated.customer.form.label.country = País
+authenticated.customer.form.button.create = Crear
+authenticated.customer.form.button.update = Actualizar

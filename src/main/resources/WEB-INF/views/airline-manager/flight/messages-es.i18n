@@ -1,0 +1,25 @@
+airline-manager.flight.form.title = Detalles del vuelo
+airline-manager.flight.list.title = Mis vuelos
+
+airline-manager.flight.form.label.tag = Etiqueta:
+airline-manager.flight.form.label.requiresSelfTransfer = Requiere transferencia propia:
+airline-manager.flight.form.label.cost = Coste:
+airline-manager.flight.form.label.description = Descripción: (Opcional)
+airline-manager.flight.form.label.scheduledDeparture = Fecha de Salida:
+airline-manager.flight.form.label.scheduledArrival = Fecha de Llegada:
+airline-manager.flight.form.label.originCity = Ciudad origen:
+airline-manager.flight.form.label.destinationCity = Ciudad destino:
+airline-manager.flight.form.label.layovers = Nº escalas:
+
+
+airlineManager.flight.form.button.legs = Escalas
+airline-manager.flight.form.button.create = Crear
+airline-manager.flight.form.button.update = Actualizar
+airline-manager.flight.form.button.delete = Borrar
+airline-manager.flight.form.button.publish = Publicar
+
+airline-manager.flight.list.label.tag = Etiqueta
+airline-manager.flight.list.label.requiresSelfTransfer = Requiere transferencia propia
+airline-manager.flight.list.label.cost = Coste
+
+airline-manager.flight.list.button.create = Crear

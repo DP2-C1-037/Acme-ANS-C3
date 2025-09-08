@@ -1,0 +1,15 @@
+administrator.assigned-to.form.title = Booking assignation form 
+
+administrator.assigned-to.list.title = Listing of booking assignations
+
+administrator.assigned-to.list.label.passport-number = Passport number
+administrator.assigned-to.list.label.full-name = Full name
+administrator.assigned-to.list.label.email = Email
+
+administrator.assigned-to.form.label.full-name = Full name:
+administrator.assigned-to.form.label.email = Email:
+administrator.assigned-to.form.label.passport-number = Passport number:
+administrator.assigned-to.form.label.birth-date = Birth date:
+administrator.assigned-to.form.label.special-needs = Special needs:
+
+

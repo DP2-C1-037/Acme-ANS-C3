@@ -1,0 +1,28 @@
+key,name,picture,averageDwellTime,promotionCode,discount
+# base entity
+service-00,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/8YcXhS0.png,50,AAAA-25,50
+# name - standard variations
+service-01,L,https://i.imgur.com/MtBRoNP.png,50,AAAD-25,50
+service-02,Lo,https://i.imgur.com/NGLSjk6.png,50,AAAE-25,50
+service-03,"Lorem ipsum dolor sit amet, consectetur adipiscin",https://i.imgur.com/fihihcF.png,50,AAAF-25,50
+service-04,"Lorem ipsum dolor sit amet, consectetur adipiscing",https://i.imgur.com/2eVF1HG.png,50,AAAG-25,50
+service-05,โลเร็ม อิปซัม,https://i.imgur.com/CqtMSmM.png,50,AAAI-25,50
+service-06,لوريم إيبسوم,https://i.imgur.com/sgx1bFo.png,50,AAAK-25,50
+service-07,洛伦·伊普森,https://i.imgur.com/qu5SrLN.png,50,AAAL-25,50
+service-08,<marquee>Hacked</marquee>,https://i.imgur.com/8n7KfX1.png,50,AAAM-25,50
+service-09,<script>alert(‘Hacked!’);</script>,https://i.imgur.com/sgx1bFo.png,50,AAAN-25,50
+service-10,'' or 'A' = 'A,https://i.imgur.com/CqtMSmM.png,50,AAAO-25,50
+# averageDwellTime - standard variations
+service-11,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/8YcXhS0.png,1,ABAI-25,50
+service-12,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/MtBRoNP.png,1.01,ABAJ-25,50
+service-13,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/NGLSjk6.png,99.99,ABAK-25,50
+service-14,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/fihihcF.png,100,ABAL-25,50
+# promotionCode - standard variations,"","","",""
+service-15,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/2eVF1HG.png,50,,50
+service-16,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/CqtMSmM.png,50,XXXX-25,50
+# money - standard variations,"","","","",""
+service-17,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/sgx1bFo.png,50,ABAM-25,
+service-18,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/qu5SrLN.png,50,ABAN-25,0
+service-19,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/qu5SrLN.png,50,ABAO-25,0.01
+service-20,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/8n7KfX1.png,50,ABAP-25,99.99
+service-21,"Lorem ipsum dolor sit amet,consectetu",https://i.imgur.com/MtBRoNP.png,50,ABAQ-25,100

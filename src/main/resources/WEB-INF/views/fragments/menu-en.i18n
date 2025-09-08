@@ -1,0 +1,86 @@
+# menu-en.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anonymous
+master.menu.anonymous.favourite-link = Favourite link
+master.menu.anonymous.adrian-favourite-link = 4599****K: Chabrera Rubio, Adrián
+master.menu.anonymous.miguel-favourite-link = 2*5*13**M: Álvarez Raya, Miguel
+master.menu.anonymous.alejandro-favourite-link = 4934****K: González Macías, Alejandro
+master.menu.anonymous.salma-favourite-link = *51**4*6M: El Hakimy, Salma
+master.menu.anonymous.ignacio-favourite-link = 7792****Q: Gutiérrez Serrera, Ignacio
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrator
+master.menu.administrator.list-user-accounts = List user accounts
+master.menu.administrator.list-airports = List airports
+master.menu.administrator.list-aircrafts = List aircrafts
+master.menu.administrator.list-airlines = List airlines
+master.menu.administrator.list-published-bookings = List published bookings
+master.menu.administrator.populate-db-initial = Populate DB (initial)
+master.menu.administrator.populate-db-sample = Populate DB (samples)
+master.menu.administrator.shut-system-down = Shut system down
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite link
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.customer ##########################################################
+
+master.menu.customer = Customer
+master.menu.customer.bookings = Bookings
+master.menu.customer.passengers = Passengers
+master.menu.customer.dashboard = Dashboard
+
+# master.menu.flightCrewMember ##########################################################
+
+master.menu.flightCrewMember = Flight Crew Member
+master.menu.flightCrewMember.flightAssignmentCompleted = List completed flight assignments 
+master.menu.flightCrewMember.flightAssignmentPlanned = List planned flight assignments 
+master.menu.flightCrewMember.flightAssignmentMinePlanned = List my planned flight assignments
+master.menu.flightCrewMember.flightAssignmentMineCompleted = List my completed flight assignments
+
+# master.menu.technician ##########################################################
+master.menu.technician = Technician
+master.menu.technician.maintenance-record = List all maintenance records
+master.menu.technician.maintenance-record-mine = List my maintenance records
+master.menu.technician.task = List all tasks
+master.menu.technician.task-mine = List my tasks
+
+# master.menu.airlineManager ##########################################################
+master.menu.airlineManager = Manager
+master.menu.airlineManager.flight = List my flights
+
+# master.menu.assistance-agent #####################################
+master.menu.assistance-agent = Assistance agent
+master.menu.assistance-agent.claim.list-completed = Completed claims
+master.menu.assistance-agent.claim.list-undergoing = Undergoing claims
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Account
+master.menu.user-account.general-profile = General profile
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.provider-profile = Provider profile
+master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-customer = Become a customer
+master.menu.user-account.customer-profile = Customer profile
+
+
+
+

@@ -1,0 +1,53 @@
+﻿key,model,registration-number,capacity,cargo-weight,status,optional-details,key:airline
+# base entity,,,,,,,
+aircraft-00,Lorem ipsum dolor sit amet,REG-001,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+# model - standard variations,,,,,,,
+aircraft-01,L,REG-002,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-02,Lo,REG-003,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-03,"Lorem ipsum dolor sit amet, consectetur adipiscin",REG-004,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-04,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-005,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-05,โลเร็ม อิปซัม,REG-006,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-06,لوريم إيبسوم,REG-007,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-07,洛伦·伊普森,REG-008,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-08,<marquee>Hacked</marquee>,REG-009,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-09,<script>alert(‘Hacked!’);</script>,REG-010,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-10,' or 'A' = 'A,REG-011,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+# registrationNumber - standard variations,,,,,,,
+aircraft-11,"Lorem ipsum dolor sit amet, consectetur adipiscing",L,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-12,"Lorem ipsum dolor sit amet, consectetur adipiscing",Lo,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-13,"Lorem ipsum dolor sit amet, consectetur adipiscing","Lorem ipsum dolor sit amet, consectetur adipiscin",128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-14,"Lorem ipsum dolor sit amet, consectetur adipiscing","Lorem ipsum dolor sit amet, consectetur adipiscing",128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-15,"Lorem ipsum dolor sit amet, consectetur adipiscing",โลเร็ม อิปซัม,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-16,"Lorem ipsum dolor sit amet, consectetur adipiscing",لوريم إيبسوم,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-17,"Lorem ipsum dolor sit amet, consectetur adipiscing",洛伦·伊普森,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-18,"Lorem ipsum dolor sit amet, consectetur adipiscing",<marquee>Hacked</marquee>,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-19,"Lorem ipsum dolor sit amet, consectetur adipiscing",<script>alert(‘Hacked!’);</script>,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-20,"Lorem ipsum dolor sit amet, consectetur adipiscing",' or 'A' = 'A,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+# capacity - standard variations,,,,,,,
+aircraft-21,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-012,1,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-22,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-013,2,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-23,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-014,254,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-24,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-015,255,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+# cargoWeight - standard variations,,,,,,,
+aircraft-25,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-016,128,2000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-26,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-017,128,2001,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-27,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-018,128,49999,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-28,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-019,128,50000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+# status - standard variations,,,,,,,
+aircraft-29,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-020,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+aircraft-30,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-021,128,26000,UNDER_MAINTENANCE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-01
+# optionalDetails - standard variations,,,,,,,
+aircraft-31,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-022,128,26000,ACTIVE_SERVICE,L,airline-01
+aircraft-32,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-023,128,26000,ACTIVE_SERVICE,Lo,airline-01
+aircraft-33,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-024,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod te",airline-01
+aircraft-34,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-025,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tem",airline-01
+aircraft-35,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-026,128,26000,ACTIVE_SERVICE,โลเร็ม อิปซัม,airline-01
+aircraft-36,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-027,128,26000,ACTIVE_SERVICE,لوريم إيبسوم,airline-01
+aircraft-37,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-028,128,26000,ACTIVE_SERVICE,洛伦·伊普森,airline-01
+aircraft-38,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-029,128,26000,ACTIVE_SERVICE,<marquee>Hacked</marquee>,airline-01
+aircraft-39,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-030,128,26000,ACTIVE_SERVICE,<script>alert(‘Hacked!’);</script>,airline-01
+aircraft-40,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-031,128,26000,ACTIVE_SERVICE,' or 'A' = 'A,airline-01
+aircraft-41,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-032,128,26000,ACTIVE_SERVICE,,airline-01
+# airline - standard variations,,,,,,,
+aircraft-42,"Lorem ipsum dolor sit amet, consectetur adipiscing",REG-033,128,26000,ACTIVE_SERVICE,"Lorem ipsum dolor sit amet, consectetur adipiscing",airline-02
+

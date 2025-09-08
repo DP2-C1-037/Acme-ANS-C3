@@ -1,0 +1,14 @@
+# welcome-es.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+master.welcome.title = ¡Bienvenido a Acme AirNav Solutions!
+master.welcome.text = \
+	Nos complace tenerte con nosotros. Aquí encontrarás herramientas diseñadas para facilitar la gestión de vuelos, reservas y operaciones aeroportuarias. Nuestro objetivo es brindarte una experiencia eficiente y sin complicaciones. Si tienes alguna duda o necesitas asistencia, nuestro equipo está siempre disponible para ayudarte. ¡Esperamos que disfrutes usando nuestro sistema!
+﻿

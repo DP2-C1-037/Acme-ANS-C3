@@ -1,0 +1,124 @@
+# validation-en.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+acme.validation.flight.identifierNumber.message = The first two letters of the identifier number must correspond to the managers's name initials
+
+acme.validation.leg.flightNumber.notNull.message = Choose a flight number!
+acme.validation.leg.scheduledDeparture.notNull.message = Choose a date!
+acme.validation.leg.scheduledArrival.notNull.message = Choose a date!
+acme.validation.leg.status.notNull.message = Select a status!
+acme.validation.leg.departureAirport.notNull.message = Select an airport!
+acme.validation.leg.arrivalAirport.notNull.message = Select an airport!
+acme.validation.leg.aircraft.notNull.message = Select an aircraft!
+
+acme.validation.leg.flightNumber.iataCode.message = The flight number is composed of the airline's IATA code followed by four digits (flight number letters have to be the same of airline's IATA code)
+
+acme.validation.leg.flightNumber.unique.message = The flight number must be unique, there cannot be two equal
+
+acme.validation.leg.departureAirport.equals.message = Leg departure and arrival airport must be different
+
+acme.validation.leg.scheduledArrival.equals.message = Scheduled arrival must be at least 1 minute after scheduled departure 
+
+acme.validation.leg.scheduledDeparture.noOverlappingLegs.message = There cannot be overlapping legs for the same flight!
+
+acme.validation.leg.aircraft.noSameAircraft.message = That aircraft is already flying!
+
+acme.validation.leg.departureAirport.noDepartureAirportOverlap.message = There is already a flight going out from that airport! 
+
+acme.validation.leg.arrivalAirport.noArrivalAirportOverlap.message = There is already a flight arriving at that airport!
+
+acme.validation.leg.scheduledDepartureIsFuture.message = You cannot program flights for the past
+
+acme.validation.leg.scheduledArrivalIsFuture.message = You cannot program flights for the past
+
+acme.validation.leg.departureAirport.consecutiveLegsMyDepartureAirportEqualsPreviousArrivalAirport.message = A flight's leg departure airport must be the previous leg arrival airport
+
+acme.validation.leg.arrivalAirport.consecutiveLegsMyArrivalAirportEqualsNextDepartureAirport.message = A flight's leg arrival airport must be the next leg departure airport
+
+acme.validation.leg.scheduledDeparture.future.message = Scheduled departure cannot be in the past!
+
+acme.validation.leg.scheduledArrival.future.message = Scheduled arrival cannot be in the past!
+
+acme.validation.leg.scheduledDeparture.noMoreThan1DayWithPreviousLeg.message = The next leg departure must be between 1 minute and 1 day after the previous one landing 
+
+acme.validation.leg.scheduledArrival.noMoreThan1DayWithNextLeg.message = The time between the previous leg landing and the next one departure must be between 1 minute and 1 day
+
+acme.validation.leg.scheduledDeparture.noMoreThan2DaysWithNextLeg.message = The next leg departure must be between 2 minutes and 2 days after the previous one departure 
+
+acme.validation.leg.scheduledArrival.noMoreThan2DaysWithPreviousLeg.message = The time between the previous leg landing and the next one landing must be between 2 minutes and 2 days
+
+acme.validation.leg.scheduledArrival.lessThan24HoursLeg.message = A leg cannot last more than 24 hours
+
+acme.validation.flight.*.notAllLegsPublishedOrNoLegs.message = The flight must have at least 1 published leg to be published, and all its legs must have been published before publishing the flight
+
+acme.validation.flight.*.noPublishedLegs.message = If the flight has published legs it cannot be deleted
+
+acme.validation.flight.*.flightDifferentAirports.message = The flight cannot have same departure and arrival airports
+
+acme.validation.airline.iataCode.message = Airline iata code must be unique
+
+acme.validation.maintenance-record.nextInspection.message = Next inspection date must be a future date
+
+acme.validation.service.promotionCode.message = The promotion code must match the pattern ^[A-Z]{4}-[0-9]{2}$, and its last two characters must match current year last two digits
+
+acme.validation.customer.identifier.syntax.message = The customer identifier first two or three letters must correspond to their initials
+
+acme.validation.customer.identifier.unique.message = The customer identifier must be unique
+
+acme.validation.technician.license-number-duplicated.message = The technician license number is already in use
+acme.validation.technician.license-number.message = The first two letters of the license number must correspond to the technician's initials
+
+acme.validation.aircraft.registration-number-duplicated.message  = The registraton number is already in use
+
+acme.validation.flight-crew-member.employee-code-duplicated.message = The employee code is already in use
+acme.validation.flight-crew-member.employee-code-invalid-format.message = The employee code must match the pattern ^[A-Z]{2,3}\\d{6}$
+acme.validation.flight-crew-member.employee-code-not-matching-initials.message = The first two letters of the employee code must match the initials of the member
+
+acme.validation.flight-assignment.member-with-overlapping-legs.message = The selected member has overlapping legs
+acme.validation.flight-assignment.leg-has-copilot.message = The selected leg already has a copilot
+acme.validation.flight-assignment.leg-has-pilot.message = The selected leg already has a pilot
+acme.validation.flight-assignment.member-not-available.message = The selected member is not available
+acme.validation.flight-assignment.leg-has-occurred.message = The selected leg has already occurred 
+acme.validation.flight-assignment.has-published-logs.message = Cannot be deleted: there are published activity records.
+
+acme.validation.activity-log.leg-not-finished.message = You cannot publish the log because the selected leg has not yet been completed 
+acme.validation.activity-log.flight-assignment-not-published.message = This log cannot be published as the selected flight assignment has not been published yet
+acme.validation.log.registration-moment.message = The log registration moment must occur after the leg finishes
+
+acme.validation.airport.code-duplicated.message = The airport code is already in use
+
+
+acme.validation.trackingLog.resolPercentage.message = Resolution percentage must be between 0.0 and 100.0
+acme.validation.trackingLog.status.message = When resolution percentage is 100.0, status must be ACCEPTED or DENIED. Otherwise, status must be PENDING.
+acme.validation.trackingLog.resolution.message = When resolution percentage is 100.0, resolution cannot be empty
+
+
+acme.validation.assistance-agent.employee-code-duplicated.message=Employee code must be unique
+acme.validation.assistance-agent.employee-code-invalid-format.message=Employee code must follow the pattern: 2-3 uppercase letters followed by 6 digits
+acme.validation.assistance-agent.employee-code-not-matching-initials.message=Employee code initials must match the initials of the name and surname
+
+acme.validation.assignedTo.alreadyAssigned.message = This passenger is already assigned to this booking
+
+acme.validation.booking.duplicated-booking.message = Booking locator code already in use
+acme.validation.booking.lastNibble.message = Last nibble must be stored in order to publish this booking
+acme.validation.booking.passengersPublished.message = All assigned passengers must be published to publish the booking
+
+acme.validation.passenger.duplicated-passport-number.message = You've already assigned this passport number to another passenger
+
+acme.validation.claim.registrationMoment.message = The registration moment must be after the assistance agent's work start date.
+
+acme.validation.claim.leg.cancelled.message= Claim must be linked to a leg that occured
+
+
+acme.validation.booking.passengers.message = At least a passenger must be assigned to this booking in order to publish it
+acme.validation.booking.flight-published.message = Assigned flight must be published
+acme.validation.booking.flightInFuture.message = Selected flight must be in future
+
+

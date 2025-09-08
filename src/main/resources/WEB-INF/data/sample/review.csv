@@ -1,0 +1,57 @@
+key,alias,moment,subject,text,score,recommended
+# base entity
+review-00,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+# alias - standard variations
+review-01,u,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-02,us,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-03,user-with-exactly-50-characters-to-test-max-length,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-05,โลเร็ม,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-06,لوريم,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-07,洛伦,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-08,<marquee>Hacked</marquee>,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-09,<script>alert('Hacked!');</script>,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-10,' or 'A' = 'A,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+# alias - no singular values
+# moment - standard variations
+review-11,user00,2020/01/01 00:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-12,user00,2020/01/01 00:01,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-13,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-14,user00,2021/10/25 23:59,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-15,user00,2023/01/01 00:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+# moment - no singular values
+# subject - standard variations
+review-16,user00,2021/09/01 10:00,L,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-17,user00,2021/09/01 10:00,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-18,user00,2021/09/01 10:00,Subject-with-exactly-50-characters-to-test-max-len,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-20,user00,2021/09/01 10:00,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-21,user00,2021/09/01 10:00,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-22,user00,2021/09/01 10:00,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-23,user00,2021/09/01 10:00,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-24,user00,2021/09/01 10:00,<script>alert('Hacked!');</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-25,user00,2021/09/01 10:00,' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+# subject - no singular values
+# text - standard variations
+review-26,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,L,5.00,TRUE
+review-27,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,Lo,5.00,TRUE
+review-28,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",5.00,TRUE
+review-29,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",5.00,TRUE
+review-30,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,โลเร็ม อิปซัม,5.00,TRUE
+review-31,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,لوريم إيبسوم,5.00,TRUE
+review-32,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,洛伦·伊普森,5.00,TRUE
+review-33,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,<marquee>Hacked</marquee>,5.00,TRUE
+review-34,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,<script>alert('Hacked!');</script>,5.00,TRUE
+review-35,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,' or 'A' = 'A,5.00,TRUE
+# text - no singular values
+# score - standard variations
+review-36,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",0.00,TRUE
+review-37,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",0.01,TRUE
+review-38,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-39,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",9.99,TRUE
+review-40,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",10.00,TRUE
+review-42,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",,TRUE
+# score - no singular values
+# recommended - standard variations
+review-43,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,TRUE
+review-44,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,FALSE
+review-45,user00,2021/09/01 10:00,Lorem ipsum dolor sit amet,"Lorem ipsum dolor sit amet, consectetur adipiscing",5.00,
+# recommended - no singular values

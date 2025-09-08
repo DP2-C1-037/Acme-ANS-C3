@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>280</y>
+      <w>440</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+TechnicianDashboard
+--
++ maintenanceRecordsByStatus: Map&lt;String, Integer&gt;
++ nearestInspectionMaintenanceRecord: String
++ higherTaskNumberAircrafts: List&lt;String&gt;
++ lastYearAverageMaintenanceCost: Money
++ lastYearMaxMaintenanceCost: Money
++ lastYearMinMaintenanceCost: Money
++ lastYearStandardDeviationMaintenanceCost: Money
++ taskAverageDuration: Double
++ taskMaxDuration: Double
++ taskMinDuration: Double
++ taskStandardDeviationDuration: Double
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

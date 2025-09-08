@@ -1,0 +1,127 @@
+# validation-es.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+acme.validation.flight.identifierNumber.message = Las dos primeras letras del número de identificación deben corresponder a las iniciales del nombre del gerente
+
+acme.validation.leg.flightNumber.notNull.message = ¡Elige un número de vuelo!
+acme.validation.leg.scheduledDeparture.notNull.message = ¡Elige una fecha!
+acme.validation.leg.scheduledArrival.notNull.message = ¡Elige una fecha!
+acme.validation.leg.status.notNull.message = ¡Seleciona un estado!
+acme.validation.leg.departureAirport.notNull.message = ¡Seleciona un aeropuerto!
+acme.validation.leg.arrivalAirport.notNull.message = ¡Seleciona un aeropuerto!
+acme.validation.leg.aircraft.notNull.message = ¡Seleciona una aeronave!
+
+acme.validation.leg.flightNumber.iataCode.message = El número de vuelo está compuesto por el código IATA de la aerolínea seguido de cuatro dígitos (las letras del número de vuelo tienen que ser las mismas que las del código IATA de la aerolínea)
+
+acme.validation.leg.flightNumber.unique.message = El número de vuelo debe ser único, no puede haber dos iguales
+
+acme.validation.leg.departureAirport.equals.message = El aeropuerto de salida y llegada deben ser diferentes
+
+acme.validation.leg.scheduledArrival.equals.message = La fecha de llegada debe ser al menos 1 minuto posterior a la fecha de salida 
+
+acme.validation.leg.scheduledDeparture.noOverlappingLegs.message = ¡No puede haber escalas solapadas para el mismo vuelo!
+
+acme.validation.leg.scheduledDeparture.noOverlappingLegs.message = ¡No puede haber escalas solapadas para el mismo vuelo!
+
+acme.validation.leg.aircraft.noSameAircraft.message = ¡Esa aeronave ya está en uso!
+
+acme.validation.leg.departureAirport.noDepartureAirportOverlap.message = ¡Ya hay un vuelo saliendo de ese aeropuerto!
+
+acme.validation.leg.arrivalAirport.noArrivalAirportOverlap.message = ¡Ya hay un vuelo llegando a ese aeropuerto!
+
+acme.validation.leg.scheduledDepartureIsFuture.message = No puede programar vuelos para el pasado
+
+acme.validation.leg.scheduledArrivalIsFuture.message = No puede programar vuelos para el pasado
+
+acme.validation.leg.arrivalAirport.consecutiveLegsDepartureAirportEqualsArrivalAirport.message = El aeropuerto de llegada debe coincidir con el de salida de la siguiente escala del vuelo
+
+acme.validation.leg.scheduledDeparture.future.message = La fecha de salida no puede estar en el pasado!
+
+acme.validation.leg.scheduledArrival.future.message = La fecha de llegada no puede estar en el pasado!
+
+acme.validation.leg.departureAirport.consecutiveLegsMyDepartureAirportEqualsPreviousArrivalAirport.message = El aeropuerto de llegada de una escala de un vuelo ha de ser el de salida de la anterior
+
+acme.validation.leg.arrivalAirport.consecutiveLegsMyArrivalAirportEqualsNextDepartureAirport.message = El aeropuerto de salida de una escala de un vuelo ha de ser el de llegada de la anterior
+
+acme.validation.leg.scheduledDeparture.noMoreThan1DayWithPreviousLeg.message = La salida de la próxima escala debe estar entre 1 minuto y 1 día después del atterizaje de la previa 
+
+acme.validation.leg.scheduledArrival.noMoreThan1DayWithNextLeg.message = El tiempo entre el atterizaje de una escala y la salida de la siguiente ha de estar entre 1 minuto y 1 día.
+
+acme.validation.leg.scheduledDeparture.noMoreThan2DaysWithNextLeg.message = La salida de la siguiente escala ha de ser entre 2 minutos y 2 días posterior a la salida de la anterior 
+
+acme.validation.leg.scheduledArrival.noMoreThan2DaysWithPreviousLeg.message = The time between the previous leg landing and the next one landing must be between 2 minutes and 2 days El tiempo entre el atterizaje de la escala enterior y la siguiente debe estar entre 2 minutos y 2 días
+
+acme.validation.leg.scheduledArrival.lessThan24HoursLeg.message = Una escala no puede durar más de 24 horas
+
+acme.validation.flight.*.notAllLegsPublishedOrNoLegs.message = El vuelo debe tener al menos 1 escala publicada para poder ser publicada, y todas sus escalas deben haber sido publicadas antes de publicar el vuelo
+
+acme.validation.flight.*.noPublishedLegs.message = Si el vuelo tiene escalas publicadas no se puede publicar
+
+acme.validation.flight.*.flightDifferentAirports.message = El vuelo no puede tener el mismo aeropuerto de llegada y salida
+
+acme.validation.airline.iataCode.message = El código iata de la aerolínea debe ser único
+
+acme.validation.maintenance-record.nextInspection.message = La fecha asociada a la próxima inspección debe ser en el futuro
+
+acme.validation.service.promotionCode.message = El código promocional debe coincidir con el patrón ^[A-Z]{4}-[0-9]{2}$, y sus dos últimos caracteres con los dos últimos dígitos del año actual
+
+acme.validation.customer.identifier.syntax.message = Los dos o tres primeros caracteres del identificador único del cliente deben coincidir con sus iniciales
+
+acme.validation.customer.identifier.unique.message = El identificador del cliente debe ser único
+
+acme.validation.technician.license-number-duplicated.message = El número de licencia ya está en uso
+acme.validation.technician.license-number.message = Los dos primeros caracteres del número de licencia deben coincidir con las iniciales del técnico
+
+acme.validation.aircraft.registration-number-duplicated.message  = Número de registro ya usado
+
+acme.validation.flight-crew-member.employee-code-duplicated.message = Código de empleado ya usado
+acme.validation.flight-crew-member.employee-code-invalid-format.message = El código de empleado debe coincidir con el patrón ^[A-Z]{2,3}\\d{6}$
+acme.validation.flight-crew-member.employee-code-not-matching-initials.message = Las dos primeras letras del employee code deben coincidir con las iniciales del miembro
+
+acme.validation.flight-assignment.member-with-overlapping-legs.message = El miembro seleccionado tiene escaladas solapadas
+acme.validation.flight-assignment.leg-has-copilot.message = La escala seleccionada ya tiene un copiloto
+acme.validation.flight-assignment.leg-has-pilot.message = La escala seleccionada ya tiene un piloto
+acme.validation.flight-assignment.member-not-available.message = El miembro seleccionado no está disponible
+acme.validation.flight-assignment.leg-has-occurred.message = La escala seleccionada ya ha ocurrido 
+acme.validation.flight-assignment.has-published-logs.message = No se puede eliminar: hay registros de actividad publicados
+
+acme.validation.activity-log.leg-not-finished.message = No puedes publicar el registro porque la escala seleccionada aún no ha finalizado
+acme.validation.activity-log.flight-assignment-not-published.message = Este registro no puede ser publicado porque la asignación de vuelo seleccionada no ha sido publicada todavía
+acme.validation.log.registration-moment.message = El momento de registro debe ocurrir después de que termine la escala
+
+acme.validation.airport.code-duplicated.message = El código del aeropuerto ya está en uso
+
+acme.validation.trackingLog.resolPercentage.message = El porcentaje de resolución debe estar entre 0.0 y 100.0
+acme.validation.trackingLog.status.message = Cuando el porcentaje de resolución es 100.0, el estado debe ser ACCEPTED o DENIED. De lo contrario, el estado debe ser PENDING.
+acme.validation.trackingLog.resolution.message = Cuando el porcentaje de resolución es 100.0, la resolución no puede estar vacía
+
+acme.validation.assistance-agent.employee-code-duplicated.message=El código de empleado debe ser único
+acme.validation.assistance-agent.employee-code-invalid-format.message=El código de empleado debe seguir el patrón: 2-3 letras mayúsculas seguidas de 6 dígitos
+acme.validation.assistance-agent.employee-code-not-matching-initials.message=Las iniciales del código de empleado deben coincidir con las iniciales del nombre y apellido
+
+acme.validation.assignedTo.alreadyAssigned.message = Este pasajero ya está asignado a esta reserva
+
+acme.validation.booking.duplicated-booking.message = Código localizador de la reserva ya en uso
+acme.validation.booking.lastNibble.message = Los últimos cuatro dígitos de la tarjeta de crédito deben ser registrados para publicar esta reserva
+acme.validation.booking.passengersPublished.message = Todos los pasajeros asignados deben estar publicados para publicar la reserva
+
+acme.validation.passenger.duplicated-passport-number.message = Ya le has asignado este número de pasaporte a otro pasajero
+
+acme.validation.claim.registrationMoment.message = El momento de registro debe ser posterior a la fecha de inicio de trabajo del agente de asistencia.
+
+acme.validation.claim.leg.cancelled.message= La reclamación debe estar vinculada a un tramo que haya ocurrido
+
+acme.validation.booking.passengers.message = Al menos un pasajero debe asignarse a esta reserva para poder publicarla
+acme.validation.booking.flight-published.message = El vuelo asignado debe estar publicado
+acme.validation.booking.flightInFuture.message = El vuelo seleccionado debe estar en el futuro
+
+
+
+

@@ -1,0 +1,22 @@
+administrator.airline.form.title = Airline details
+administrator.airline.list.title = Listing of airlines
+
+administrator.airline.form.label.name = Name:
+administrator.airline.form.label.iataCode = Iata code:
+administrator.airline.form.label.website = Website:
+administrator.airline.form.label.foundationMoment = Foundation moment:
+administrator.airline.form.label.type = Type: 
+administrator.airline.form.label.email = E-mail: (Optional)
+administrator.airline.form.label.phoneNumber= Phone number: (Optional)
+
+administrator.airline.form.button.create = Create
+administrator.airline.form.button.update = Update
+administrator.airline.form.button.delete = Delete
+administrator.airline.form.button.publish = Publish
+administrator.airline.form.label.confirmation = Confirm that the airline data is correct.
+
+administrator.airline.list.label.name = Name
+administrator.airline.list.label.iataCode = Iata code
+administrator.airline.list.label.type = Type
+
+administrator.airline.list.button.create = Create

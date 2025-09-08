@@ -1,0 +1,18 @@
+customer.assigned-to.form.title = Detalles de asignación de reserva 
+
+customer.assigned-to.list.title = Lista de asignaciones de reserva
+
+customer.assigned-to.list.label.passport-number = Número de pasaporte
+customer.assigned-to.list.label.full-name = Nombre completo
+customer.assigned-to.list.label.email = Email
+
+customer.assigned-to.list.button.add = Añadir
+
+customer.assigned-to.form.label.full-name = Nombre completo:
+customer.assigned-to.form.label.email = Email:
+customer.assigned-to.form.label.passport-number = Número de pasaporte:
+customer.assigned-to.form.label.birth-date = Fecha de nacimiento:
+customer.assigned-to.form.label.special-needs = Necesidades especiales:
+
+customer.assigned-to.form.button.add = Añadir
+customer.assigned-to.form.button.delete = Eliminar

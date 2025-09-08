@@ -1,0 +1,36 @@
+key,tag,requiresSelfTransfer,cost,description,draftMode,key:airlineManager
+
+# Base entity
+flight-01,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+
+# tag - standard variations
+flight-02,L,NOT_SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+flight-03,Lo,NOT_SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+flight-04,Lorem ipsum dolor sit amet  consectetur adipiscin,NOT_SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+flight-05,Lorem ipsum dolor sit amet  consectetur adipiscing,NOT_SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+
+# requiresSelfTransfer - standard variations
+flight-06,Lorem ipsum dolor sit amet consectetur adipiscing ,NOT_SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+
+# cost - standard variations
+flight-07,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+flight-08,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 0.01,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+flight-09,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 999999.99,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+flight-10,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 1000000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,true,airline-manager-01
+
+# description - standard variations
+flight-11,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 500000.00,,true,airline-manager-01
+flight-12,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 500000.00,L,true,airline-manager-02
+flight-13,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*,true,airline-manager-01
+flight-15,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor* ,true,airline-manager-02
+
+# draftMode - standard variations
+flight-16,Lorem ipsum dolor sit ame,SELF_TRANSFER,EUR 500000.00,Lorem ipsum dolor sit amet consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*,false,airline-manager-01
+
+# extra para pruebas
+flight-17,A Probar (1 leg publicada y otra no),SELF_TRANSFER,EUR 120.00,Me gusta probar,true,airline-manager-01
+flight-18,A Probar 2 (1 leg publicada),SELF_TRANSFER,EUR 120.00,Me gusta probar,true,airline-manager-01
+flight-19,A Probar 3 (sin legs),SELF_TRANSFER,EUR 120.00,Me gusta probar,true,airline-manager-01
+flight-20,A Probar 2 (2 legs sin publicar),SELF_TRANSFER,EUR 120.00,Me gusta probar,true,airline-manager-01
+flight-21,A Probar 2 (2 legs publicadas),SELF_TRANSFER,EUR 120.00,Me gusta probar,true,airline-manager-01
+flight-22,A Probar 3 (1 leg publicada),SELF_TRANSFER,EUR 120.00,Me gusta probar,false,airline-manager-01

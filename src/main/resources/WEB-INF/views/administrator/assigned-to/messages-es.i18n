@@ -1,0 +1,13 @@
+administrator.assigned-to.form.title = Detalles de asignación de reserva 
+
+administrator.assigned-to.list.title = Lista de asignaciones de reserva
+
+administrator.assigned-to.list.label.passport-number = Número de pasaporte
+administrator.assigned-to.list.label.full-name = Nombre completo
+administrator.assigned-to.list.label.email = Email
+
+administrator.assigned-to.form.label.full-name = Nombre completo:
+administrator.assigned-to.form.label.email = Email:
+administrator.assigned-to.form.label.passport-number = Número de pasaporte:
+administrator.assigned-to.form.label.birth-date = Fecha de nacimiento:
+administrator.assigned-to.form.label.special-needs = Necesidades especiales:

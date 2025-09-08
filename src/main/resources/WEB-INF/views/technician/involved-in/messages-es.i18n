@@ -1,0 +1,18 @@
+technician.involved-in.list.title = Listado de las tareas del registro de mantenimiento
+technician.involved-in.form.title = Detalles de la tarea
+
+technician.involved-in.form.label.task = Tarea:
+technician.involved-in.form.label.description = Descripción:
+technician.involved-in.form.label.type = Type:
+technician.involved-in.form.label.priority = Priority:
+technician.involved-in.form.label.estimated-duration = Estimated duration:
+technician.involved-in.form.label.technician = Technician:
+
+technician.involved-in.form.button.add = Añadir
+technician.involved-in.form.button.delete = Quitar
+
+technician.involved-in.list.label.type = Tipo
+technician.involved-in.list.label.description = Descripción
+technician.involved-in.list.label.priority = Prioridad
+
+technician.involved-in.list.button.add = Añadir

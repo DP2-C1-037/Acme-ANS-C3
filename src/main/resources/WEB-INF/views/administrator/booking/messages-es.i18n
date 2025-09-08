@@ -1,0 +1,17 @@
+administrator.booking.form.title = Detalles de reserva
+
+administrator.booking.form.label.locator-code = Código localizador:
+administrator.booking.form.label.purchase-moment = Momento de compra:
+administrator.booking.form.label.travel-class = Clase:
+administrator.booking.form.label.price = Precio:
+administrator.booking.form.label.last-nibble = Últimos cuatro dígitos de la tarjeta de crédito:
+administrator.booking.form.label.flight = Vuelo:
+administrator.booking.form.label.customer = Cliente:
+
+administrator.booking.list.title = Lista de reservas
+
+administrator.booking.list.label.locator-code = Código localizador
+administrator.booking.list.label.purchase-moment = Momento de compra
+administrator.booking.list.label.customer = Cliente
+
+administrator.booking.form.button.passengers = Pasajeros

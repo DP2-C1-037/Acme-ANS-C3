@@ -1,0 +1,25 @@
+airline-manager.leg.form.title = Detalles de escalas
+airline-manager.leg.list.title = Mis escalas
+
+airline-manager.leg.form.label.flightNumber = Número de vuelo:
+airline-manager.leg.form.label.scheduledDeparture = Fecha de salida:
+airline-manager.leg.form.label.scheduledArrival = Fecha de llegada:
+airline-manager.leg.form.label.status = Estado:
+airline-manager.leg.form.label.duration = Duración:
+airline-manager.leg.form.label.departureAirport = Aeropuerto de salida:
+airline-manager.leg.form.label.arrivalAirport = Aeropuerto de llegada:
+airline-manager.leg.form.label.flight = Vuelo:
+airline-manager.leg.form.label.aircraft = Aeronave desplegada:
+
+airline-manager.leg.form.button.create = Crear
+airline-manager.leg.form.button.create-from-all-mine = Crear
+airline-manager.leg.form.button.update = Actualizar
+airline-manager.leg.form.button.delete = Borrar
+airline-manager.leg.form.button.publish = Publicar
+
+airline-manager.leg.list.label.flightNumber = Número de vuelo
+airline-manager.leg.list.label.scheduledDeparture = Fecha de salida
+airline-manager.leg.list.label.scheduledArrival = Fecha de llegada
+
+airline-manager.leg.list.button.create = Crear
+airline-manager.leg.list.button.create-from-all-mine = Crear

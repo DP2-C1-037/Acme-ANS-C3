@@ -1,0 +1,44 @@
+key,fullName,email,passportNumber,birthDate,specialNeeds,draftMode,key:customer
+# base entity
+passenger-00,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX00,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+# fullName - standard variations,"","","","","",""
+passenger-01,L,acme@lorem-ipsum.org,XXXXXX01,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-02,Lo,acme@lorem-ipsum.org,XXXXXX02,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",acme@lorem-ipsum.org,XXXXXX03,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",acme@lorem-ipsum.org,XXXXXX04,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-05,โลเร็ม อิปซัม,acme@lorem-ipsum.org,XXXXXX05,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-06,لوريم إيبسوم,acme@lorem-ipsum.org,XXXXXX06,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-07,洛伦·伊普森,acme@lorem-ipsum.org,XXXXXX07,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-08,<marquee>Hacked</marquee>,acme@lorem-ipsum.org,XXXXXX08,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-09,<script>alert(‘Hacked!’);</script>,acme@lorem-ipsum.org,XXXXXX09,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-10,'' or 'A' = 'A,acme@lorem-ipsum.org,XXXXXX10,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+# email - standard variations
+passenger-11,"Lorem ipsum dolor sit amet,consectetu",a@b.e,XXXXXX11,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-12,"Lorem ipsum dolor sit amet,consectetu",a@b.es,XXXXXX12,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-13,"Lorem ipsum dolor sit amet,consectetu",a@b.esx,XXXXXX13,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-14,"Lorem ipsum dolor sit amet,consectetu",lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.doloris.edu,XXXXXX14,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-15,"Lorem ipsum dolor sit amet,consectetu",lorem-ipsum@dolor.sit.amet.consectetur.adipiscing.elit.sed.do.eiusmod.tempor.incididunt.ut.labore.et.dolore.magna.aliqua.Ut.enim.ad.minim.veniam.quis.nostrud.exercitation.ullamco.laboris.nisi.ut.aliquip.ex.ea.commodo.consequat.duis.aute.irure.dolor.es.org,XXXXXX15,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+# passportNumber - standard variations
+passenger-16,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,75D8Y8,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-17,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,K0C369R2S,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+# birthDate - standard variations
+passenger-18,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX18,2000/01/01 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-19,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX19,2000/01/01 0:01,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-20,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX20,2024/12/31 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+passenger-21,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX21,2025/01/01 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-01
+# specialNeeds - standard variations
+passenger-22,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX22,2012/07/02 0:00,,false,customer-01
+passenger-23,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX23,2012/07/02 0:00,L,false,customer-01
+passenger-24,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX24,2012/07/02 0:00,Lo,false,customer-01
+passenger-25,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX25,2012/07/02 0:00,"Lorem ipsum dolor sit amet, consectetur adipiscin",false,customer-01
+passenger-26,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX26,2012/07/02 0:00,"Lorem ipsum dolor sit amet, consectetur adipiscing",false,customer-01
+passenger-27,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX27,2012/07/02 0:00,โลเร็ม อิปซัม,false,customer-01
+passenger-28,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX28,2012/07/02 0:00,لوريم إيبسوم,false,customer-01
+passenger-29,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX29,2012/07/02 0:00,洛伦·伊普森,false,customer-01
+passenger-30,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX30,2012/07/02 0:00,<marquee>Hacked</marquee>,false,customer-01
+passenger-31,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX31,2012/07/02 0:00,<script>alert(‘Hacked!’);</script>,false,customer-01
+passenger-32,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX32,2012/07/02 0:00,'' or 'A' = 'A,false,customer-01
+# draftMode - standard variations
+passenger-33,"draftmode dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX33,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",true,customer-01
+# customer - standard variations
+passenger-34,"Lorem ipsum dolor sit amet,consectetu",acme@lorem-ipsum.org,XXXXXX34,2012/07/02 0:00,"Lorem ipsum dolor sit amet,consectetu",false,customer-02

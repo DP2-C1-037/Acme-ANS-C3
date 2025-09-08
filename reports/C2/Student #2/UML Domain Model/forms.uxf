@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>200</y>
+      <w>390</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+CustomerDashboard
+--
++ lastFiveDestinations: List&lt;String&gt; 
++ lastYearMoneySpentInBookings: Money 
++ numberOfBookingsByTravelClass: Map&lt;String, Integer&gt; 
++ lastFiveYearsBookingCostsCount: Money 
++ lastFiveYearsBookingCostsAverage: Money 
++ lastFiveYearsBookingCostsMinimun: Money
++ lastFiveYearsBookingCostsMaximum: Money 
++ lastFiveYearsBookingCostsStandardDeviation: Money 
++ bookingsNumberOfPassengersCount: Integer 
++ bookingsNumberOfPassengersAverage: Double 
++ bookingsNumberOfPassengersMinimum: Integer 
++ bookingsNumberOfPassengersMaximum: Integer 
++ bookingsNumberOfPassengersStandardDeviation: Double
+bg=cyan</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

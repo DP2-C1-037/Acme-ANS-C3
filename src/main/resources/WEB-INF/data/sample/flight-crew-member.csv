@@ -1,0 +1,6 @@
+﻿key,employee-code,phone-number,language-skills,availability-status,salary,years-of-experience,key:userAccount,key:airline
+flight-crew-member-05,MD123456,12345678901,"Greek, Spanish",AVAILABLE,EUR 15000,4,user-account-flight-crew-member-05,airline-01
+flight-crew-member-01,MGP123456,123456789012345,"Greek, English",AVAILABLE,EUR 5000,10,user-account-flight-crew-member-01,airline-01
+flight-crew-member-02,MF902647,1234567823,"Arabic, Spanish, Chinese",ON_LEAVE,EUR 4500,5,user-account-flight-crew-member-02,airline-01
+flight-crew-member-03,LR620374,219384671,"Arabic, Spanish, Chinese",AVAILABLE,EUR 6500,8,user-account-flight-crew-member-03,airline-02
+flight-crew-member-04,AR456789,1294764,Hindi,ON_VACATION,EUR 8000,6,user-account-flight-crew-member-04,airline-02

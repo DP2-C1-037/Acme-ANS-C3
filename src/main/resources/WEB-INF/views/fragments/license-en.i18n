@@ -1,0 +1,15 @@
+# license-en.i18n
+#
+# Copyright (C) 2012-2025 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+master.license.title = License
+master.license.text = \
+You are permitted to use this system at no cost, provided that you comply with all applicable regulations and legal requirements. We respect your privacy and do not disclose any of your information to third parties.
+
+By continuing to use this system, you acknowledge and accept these conditions.

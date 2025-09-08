@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>840</x>
+      <y>180</y>
+      <w>460</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Flight
+-
+- tag: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
+- requiresSelfTransfer: boolean {Mandatory, Valid, Automapped}
+- cost: Money {Mandatory, ValidMoney, Automapped}
+- description: String {Optional, ValidString, Automapped}
+-
+- getScheduledDeparture(): Date {Transient}
+- getScheduledArrival(): Date {Transient}
+- getOriginCity(): String {Transient}
+- getDestinationCity(): String {Transient}
+- getLayoversNumber(): int {Transient}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>260</x>
+      <y>0</y>
+      <w>750</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Airline
+-
+- name: String {Mandatory, ValidString(max = 50), Automapped}
+- iataCode: String {Mandatory, ValidString(pattern = "[A-Z]{3}"), Column(unique = true)}
+- website: String {Mandatory, ValidUrl, Automapped}
+- type: AirlineType {Mandatory, Valid, Automapped}
+- foundationMoment: Date {Mandatory, ValidMoment(min = "2000/01/01 00:00", past = true), Temporal(TIMESTAMP}
+- email: String {Optional, ValidEmail2, Automapped}
+- phoneNumber: String {Optional, ValidString(pattern = "^\\+?\\d{6,15}$"), Automapped}
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>410</y>
+      <w>680</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Leg {ValidLegFlightNumber}
+-
+- flightNumber: String {Mandatory, ValidString(pattern = "[A-Z]{3}\\d{4}$"), Column(unique = true)}
+- scheduledDeparture: Date {Mandatory, ValidMoment(min = "2000/01/01 00:00"), Temporal(TIMESTAMP)}
+- scheduledArrival: Date {Mandatory, ValidMoment(min = "2000/01/01 00:00"), Temporal(TIMESTAMP)}
+- duration: Integer {Mandatory, ValidNumber(min = 1, max = 24), Automapped}
+- status: LegStatus {Mandatory, Valid, Automapped}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>180</y>
+      <w>680</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AirlineManager {ValidIdentifierNumber}
+-
+- identifierNumber: String {Mandatory, ValidString(pattern = "^[A-Z]{2,3}\\d{6}$"), Column(unique = true)}
+- experienceYears: Integer {Mandatory, ValidNumber, Automapped}
+- birthDate: Date {Mandatory, ValidMoment(min = "1965/01/01 00:00", past = true), Temporal(TIMESTAMP)}
+- pictureLink: String {Optional, ValidUrl, Automapped}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>170</x>
+      <y>70</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>490</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Airport
+-
+Another student's entity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>410</y>
+      <w>160</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Aircraft
+-
+Another student's entity</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1000</x>
+      <y>70</y>
+      <w>90</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>70.0;110.0;70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>420</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>520</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>370</y>
+      <w>290</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
+AirlineManagerDashboard
+-
+- ranking: Double
+- yearsToRetire: Integer
+- onTimeRatio: Double
+- mostPopularAirports: Map&lt;Airport, Integer&gt;
+- leastPopularAirports: Map&lt;Airport, Integer&gt;
+- legsByStatus: Map&lt;LegStatus, Integer&gt;
+- averageCost: Double
+- minCost: Double
+- maxCost: Double
+- standardDeviationCost: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>130</x>
+      <y>280</y>
+      <w>40</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>740</x>
+      <y>570</y>
+      <w>450</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+WeatherConditions
+-
+- temperature: Double {Mandatory, ValidNumber, Automapped}
+- windSpeed: Double {Mandatory, ValidNumber, Automapped}
+- conditions: String {Mandatory, ValidString, Automapped}
+- humidity: Double {Mandatory, ValidNumber, Automapped}
+- timestamp: Date {Mandatory, ValidNumber, Temporal(TIMESTAMP)}
+- leg: Leg {Mandatory, Valid, ManyToOne}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>280</y>
+      <w>100</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>530</y>
+      <w>120</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=*
+m2=1</panel_attributes>
+    <additional_attributes>100.0;120.0;10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

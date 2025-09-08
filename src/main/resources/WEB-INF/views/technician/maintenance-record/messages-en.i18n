@@ -1,0 +1,26 @@
+technician.maintenance-record.form.title = Maintenance record details
+technician.maintenance-record.list.title = Listing of maintenance records
+
+technician.maintenance-record.form.label.maintenanceDate = Maintenance date:
+technician.maintenance-record.form.label.nextInspectionDueDate = Next inspection:
+technician.maintenance-record.form.label.status = Status:
+technician.maintenance-record.form.label.estimatedCost = Estimated cost:
+technician.maintenance-record.form.label.notes = Notes: (Optional)
+technician.maintenance-record.form.label.technician = Technician:
+technician.maintenance-record.form.label.aircraft = Aircraft:
+
+technician.maintenance-record.form.button.tasks = Tasks
+technician.maintenance-record.form.button.create = Create
+technician.maintenance-record.form.button.update = Update
+technician.maintenance-record.form.button.delete = Delete
+technician.maintenance-record.form.button.publish = Publish
+
+technician.maintenance-record.list.label.aircraft-model = Aircraft
+technician.maintenance-record.list.label.maintenanceDate = Maintenance date
+technician.maintenance-record.list.label.nextInspectionDueDate = Next inspection
+technician.maintenance-record.list.label.status = Status
+
+technician.maintenance-record.list.button.create = Create
+
+technician.maintenance-record.publish.status = The maintenance record must be completed
+technician.maintenance-record.publish.published-tasks = The maintenance record has either no published tasks or some unpublished tasks

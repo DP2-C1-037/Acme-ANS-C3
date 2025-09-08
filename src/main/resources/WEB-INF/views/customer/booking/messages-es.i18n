@@ -1,0 +1,24 @@
+customer.booking.form.title = Detalles de reserva
+
+customer.booking.form.label.locator-code = Código localizador:
+customer.booking.form.label.purchase-moment = Momento de compra:
+customer.booking.form.label.travel-class = Clase:
+customer.booking.form.label.price = Precio:
+customer.booking.form.label.last-nibble = Últimos cuatro dígitos de la tarjeta de crédito:
+customer.booking.form.label.flight = Vuelo:
+customer.booking.form.label.draft-mode = ¿Está en modo borrador?
+
+customer.booking.form.button.create = Crear
+customer.booking.form.button.update = Actualizar
+customer.booking.form.button.delete = Eliminar
+customer.booking.form.button.publish = Publicar
+
+customer.booking.list.title = Lista de reservas
+
+customer.booking.list.label.locator-code = Código localizador
+customer.booking.list.label.purchase-moment = Momento de compra
+customer.booking.list.label.travel-class = Clase
+customer.booking.list.label.price = Precio
+
+customer.booking.list.button.create = Crear
+customer.booking.form.button.passengers = Pasajeros

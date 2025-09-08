@@ -1,0 +1,4 @@
+key,key:userAccount,licenseNumber,phoneNumber,specialisation,healthTestPassed,experienceYears,certifications
+technician-01,user-account-technician-01,"ATY819320","34866785814","Lorem ipsum dolor sit ame",true,8,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*"
+technician-02,user-account-technician-02,"MTS032563","34642455726","Lorem ipsum dolor sit ame",true,4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*"
+technician-03,user-account-technician-03,"STX244805","1357924680","Lorem ipsum dolor sit ame",true,2,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*"

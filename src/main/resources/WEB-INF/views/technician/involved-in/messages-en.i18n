@@ -1,0 +1,18 @@
+technician.involved-in.list.title = Listing of maintenance record's tasks
+technician.involved-in.form.title = Task details
+
+technician.involved-in.form.label.task = Task:
+technician.involved-in.form.label.description = Description:
+technician.involved-in.form.label.type = Type:
+technician.involved-in.form.label.priority = Priority:
+technician.involved-in.form.label.estimated-duration = Estimated duration:
+technician.involved-in.form.label.technician = Technician:
+
+technician.involved-in.form.button.add = Add
+technician.involved-in.form.button.delete = Remove
+
+technician.involved-in.list.label.type = Type
+technician.involved-in.list.label.description = Description
+technician.involved-in.list.label.priority = Priority
+
+technician.involved-in.list.button.add = Add
