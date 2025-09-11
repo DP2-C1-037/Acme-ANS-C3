@@ -16,7 +16,10 @@ public class AuthenticatedFlightCrewMemberController extends AbstractGuiControll
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedFlightCrewMemberCreateService createService;
+	private AuthenticatedFlightCrewMemberCreateService	createService;
+
+	@Autowired
+	private AuthenticatedFlightCrewMemberUpdateService	updateService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -24,5 +27,6 @@ public class AuthenticatedFlightCrewMemberController extends AbstractGuiControll
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("create", this.createService);
+		super.addBasicCommand("update", this.updateService);
 	}
 }

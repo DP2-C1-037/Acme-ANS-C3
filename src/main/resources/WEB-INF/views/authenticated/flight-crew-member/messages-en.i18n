@@ -9,3 +9,4 @@ authenticated.flight-crew-member.form.label.years-of-experience = Years of exper
 authenticated.flight-crew-member.form.label.airline = Airline:
 
 authenticated.flight-crew-member.form.button.create = Create
+authenticated.flight-crew-member.form.button.update = Update
