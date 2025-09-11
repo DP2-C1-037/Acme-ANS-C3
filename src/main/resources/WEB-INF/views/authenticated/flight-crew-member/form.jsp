@@ -16,4 +16,8 @@
 	<jstl:if test="${_command == 'create'}">
 		<acme:submit code="authenticated.flight-crew-member.form.button.create" action="/authenticated/flight-crew-member/create"/>
 	</jstl:if>
+	
+	<jstl:if test="${_command == 'update'}">
+		<acme:submit code="authenticated.flight-crew-member.form.button.update" action="/authenticated/flight-crew-member/update"/>
+	</jstl:if>
 </acme:form>
