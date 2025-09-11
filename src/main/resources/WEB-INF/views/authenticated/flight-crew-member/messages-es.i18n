@@ -1,0 +1,11 @@
+authenticated.flight-crew-member.form.title = Perfil de miembro de tripulación
+
+authenticated.flight-crew-member.form.label.employee-code = Código de empleado:
+authenticated.flight-crew-member.form.label.phone-number = Teléfono:
+authenticated.flight-crew-member.form.label.language-skills = Idiomas:
+authenticated.flight-crew-member.form.label.availability-status = Disponibilidad:
+authenticated.flight-crew-member.form.label.salary = Salario:
+authenticated.flight-crew-member.form.label.years-of-experience = Años de experiencia:
+authenticated.flight-crew-member.form.label.airline = Aerolínea:
+
+authenticated.flight-crew-member.form.button.create = Crear
