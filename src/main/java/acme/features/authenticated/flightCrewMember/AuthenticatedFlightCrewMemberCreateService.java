@@ -1,6 +1,8 @@
 
 package acme.features.authenticated.flightCrewMember;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
@@ -10,6 +12,7 @@ import acme.client.components.views.SelectChoices;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
+import acme.entities.airline.Airline;
 import acme.realms.flightCrewMember.FlightCrewMember;
 
 @GuiService
@@ -34,46 +37,48 @@ public class AuthenticatedFlightCrewMemberCreateService extends AbstractGuiServi
 
 	@Override
 	public void load() {
-		FlightCrewMember crewMember;
+		FlightCrewMember member;
 		int userAccountId;
 		UserAccount userAccount;
 
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
 		userAccount = this.repository.findUserAccountById(userAccountId);
 
-		crewMember = new FlightCrewMember();
-		crewMember.setUserAccount(userAccount);
+		member = new FlightCrewMember();
+		member.setUserAccount(userAccount);
 
-		super.getBuffer().addData(crewMember);
+		super.getBuffer().addData(member);
 	}
 
 	@Override
-	public void bind(final FlightCrewMember crewMember) {
-		super.bindObject(crewMember, "employeeCode", "phoneNumber", "languageSkills", "availabilityStatus", "salary", "yearsOfExperience", "airline");
+	public void bind(final FlightCrewMember member) {
+		super.bindObject(member, "employeeCode", "phoneNumber", "languageSkills", "availabilityStatus", "salary", "yearsOfExperience", "airline");
 	}
 
 	@Override
-	public void validate(final FlightCrewMember crewMember) {
+	public void validate(final FlightCrewMember member) {
 		;
 	}
 
 	@Override
-	public void perform(final FlightCrewMember crewMember) {
-		this.repository.save(crewMember);
+	public void perform(final FlightCrewMember member) {
+		this.repository.save(member);
 	}
 
 	@Override
-	public void unbind(final FlightCrewMember crewMember) {
+	public void unbind(final FlightCrewMember member) {
 		Dataset dataset;
 		SelectChoices availabilities;
-		SelectChoices airlines;
+		Collection<Airline> airlines;
+		SelectChoices airlinesCode;
 
-		availabilities = SelectChoices.from(acme.datatypes.AvailabilityStatus.class, crewMember.getAvailabilityStatus());
-		airlines = SelectChoices.from(this.repository.findAllAirlines(), "name", crewMember.getAirline());
+		airlines = this.repository.findAllAirlines();
+		availabilities = SelectChoices.from(acme.datatypes.AvailabilityStatus.class, member.getAvailabilityStatus());
+		airlinesCode = SelectChoices.from(airlines, "iataCode", member.getAirline());
 
-		dataset = super.unbindObject(crewMember, "employeeCode", "phoneNumber", "languageSkills", "availabilityStatus", "salary", "yearsOfExperience", "airline");
+		dataset = super.unbindObject(member, "employeeCode", "phoneNumber", "languageSkills", "availabilityStatus", "salary", "yearsOfExperience", "airline");
 		dataset.put("availabilities", availabilities);
-		dataset.put("airlines", airlines);
+		dataset.put("airlines", airlinesCode);
 
 		super.getResponse().addData(dataset);
 	}
