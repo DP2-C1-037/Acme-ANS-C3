@@ -83,6 +83,8 @@ master.menu.user-account.become-flight-crew-member = Become a flight crew member
 master.menu.user-account.customer-profile = Customer profile
 master.menu.user-account.flight-crew-member-profile = Flight crew member profile
 
-
+# master.menu.any #####################################
+master.menu.any = Public
+master.menu.any.flightAssignment = Flight assignments
 
 

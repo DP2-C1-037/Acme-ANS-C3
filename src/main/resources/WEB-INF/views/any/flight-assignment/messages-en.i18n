@@ -1,0 +1,14 @@
+any.flight-assignment.form.title = Flight assignment details
+any.flight-assignment.form.label.last-update-moment = Last update moment:
+any.flight-assignment.form.label.flight-crew-member = Flight crew member:
+any.flight-assignment.form.label.flight-crew-duty = Duty:
+any.flight-assignment.form.label.leg = Flight number:
+any.flight-assignment.form.label.status = Status:
+any.flight-assignment.form.label.remarks = Remarks:
+
+any.flight-assignment.list.title = Published flight assignments
+any.flight-assignment.list.label.flight-number = Flight number:
+any.flight-assignment.list.label.employee-code = Employee code:
+any.flight-assignment.list.label.duty = Duty:
+any.flight-assignment.list.label.status = Status:
+any.flight-assignment.list.label.last-update-moment = Last update moment:

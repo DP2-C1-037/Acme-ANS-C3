@@ -61,6 +61,10 @@
 			<acme:menu-suboption code="master.menu.flightCrewMember.flightAssignmentMinePlanned" action="/flight-crew-member/flight-assignment/list-mine-planned"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.any">
+			<acme:menu-suboption code="master.menu.any.flightAssignment" action="/any/flight-assignment/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.technician" access="hasRealm('Technician')">
 			<acme:menu-suboption code="master.menu.technician.maintenance-record" action="/technician/maintenance-record/list"/>
 			<acme:menu-suboption code="master.menu.technician.maintenance-record-mine" action="/technician/maintenance-record/list-mine"/>

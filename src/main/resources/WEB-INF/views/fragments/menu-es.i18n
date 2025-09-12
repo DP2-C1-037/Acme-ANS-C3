@@ -84,3 +84,6 @@ master.menu.user-account.become-flight-crew-member = Hazte miembro de tripulaci�
 master.menu.user-account.customer-profile = Perfil de cliente
 master.menu.user-account.flight-crew-member-profile = Perfil de miembro de tripulación
 
+# master.menu.any #####################################
+master.menu.any = Público
+master.menu.any.flightAssignment = Asignaciones de vuelo
