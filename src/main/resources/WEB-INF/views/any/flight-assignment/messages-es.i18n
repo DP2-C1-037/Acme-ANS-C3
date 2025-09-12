@@ -1,0 +1,14 @@
+any.flight-assignment.form.title = Detalles de la asignación de vuelo
+any.flight-assignment.form.label.last-update-moment = Momento de última actualización:
+any.flight-assignment.form.label.flight-crew-member = Miembro de la tripulación de vuelo:
+any.flight-assignment.form.label.flight-crew-duty = Tarea:
+any.flight-assignment.form.label.leg = Número de vuelo:
+any.flight-assignment.form.label.status = Estado:
+any.flight-assignment.form.label.remarks = Observaciones:
+
+any.flight-assignment.list.title = Asignaciones de vuelo publicadas
+any.flight-assignment.list.label.flight-number = Número de vuelo:
+any.flight-assignment.list.label.employee-code = Código de empleado:
+any.flight-assignment.list.label.duty = Tarea:
+any.flight-assignment.list.label.status = Estado:
+any.flight-assignment.list.label.last-update-moment = Momento de última actualización:
