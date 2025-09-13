@@ -1,0 +1,11 @@
+flight-crew-member.flight-crew-member-dashboard.form.title = Flight Crew Member Dashboard
+flight-crew-member.dashboard.form.title.general-indicators = Statistics about your flight assignments
+
+flight-crew-member.dashboard.form.label.last-five-destinations = Last five destinations
+flight-crew-member.dashboard.form.label.incident-counts-by-severity = Incident counts by severity
+flight-crew-member.dashboard.form.label.last-leg-crew-members = Crew members of the last leg
+flight-crew-member.dashboard.form.label.flight-assignments-by-status = Flight assignments by status
+flight-crew-member.dashboard.form.label.average-flight-assignments = Average flight assignments (last 10 months)
+flight-crew-member.dashboard.form.label.min-flight-assignments = Minimum flight assignments (last 10 months)
+flight-crew-member.dashboard.form.label.max-flight-assignments = Maximum flight assignments (last 10 months)
+flight-crew-member.dashboard.form.label.stddev-flight-assignments = Std. dev. of flight assignments (last 10 months)

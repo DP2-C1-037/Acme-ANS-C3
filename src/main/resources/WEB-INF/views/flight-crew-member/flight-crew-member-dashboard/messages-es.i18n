@@ -1,0 +1,11 @@
+flight-crew-member.flight-crew-member-dashboard.form.title = Panel de miembro de tripulación
+flight-crew-member.dashboard.form.title.general-indicators = Estadísticas sobre tus asignaciones de vuelo
+
+flight-crew-member.dashboard.form.label.last-five-destinations = Últimos cinco destinos
+flight-crew-member.dashboard.form.label.incident-counts-by-severity = Conteo de incidentes por severidad
+flight-crew-member.dashboard.form.label.last-leg-crew-members = Tripulantes de la última leg
+flight-crew-member.dashboard.form.label.flight-assignments-by-status = Asignaciones por estado
+flight-crew-member.dashboard.form.label.average-flight-assignments = Media de asignaciones (últimos 10 meses)
+flight-crew-member.dashboard.form.label.min-flight-assignments = Mínimo de asignaciones (últimos 10 meses)
+flight-crew-member.dashboard.form.label.max-flight-assignments = Máximo de asignaciones (últimos 10 meses)
+flight-crew-member.dashboard.form.label.stddev-flight-assignments = Desviación estándar de asignaciones (últimos 10 meses)
