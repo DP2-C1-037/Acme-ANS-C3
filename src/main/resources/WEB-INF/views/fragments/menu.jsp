@@ -59,6 +59,7 @@
 			<acme:menu-suboption code="master.menu.flightCrewMember.flightAssignmentMineCompleted" action="/flight-crew-member/flight-assignment/list-mine-completed"/>
 			<acme:menu-suboption code="master.menu.flightCrewMember.flightAssignmentPlanned" action="/flight-crew-member/flight-assignment/list-planned"/>
 			<acme:menu-suboption code="master.menu.flightCrewMember.flightAssignmentMinePlanned" action="/flight-crew-member/flight-assignment/list-mine-planned"/>
+			<acme:menu-suboption code="master.menu.flightCrewMember.dashboard" action="/flight-crew-member/flight-crew-member-dashboard/show"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.any">

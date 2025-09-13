@@ -54,6 +54,7 @@ master.menu.flightCrewMember.flightAssignmentCompleted = List completed flight a
 master.menu.flightCrewMember.flightAssignmentPlanned = List planned flight assignments 
 master.menu.flightCrewMember.flightAssignmentMinePlanned = List my planned flight assignments
 master.menu.flightCrewMember.flightAssignmentMineCompleted = List my completed flight assignments
+master.menu.flightCrewMember.dashboard = Dashboard
 
 # master.menu.technician ##########################################################
 master.menu.technician = Technician

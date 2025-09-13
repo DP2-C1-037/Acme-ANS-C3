@@ -53,7 +53,7 @@ master.menu.flightCrewMember.flightAssignmentCompleted = Ver asignaciones de vue
 master.menu.flightCrewMember.flightAssignmentPlanned = Ver asignaciones de vuelo planificadas
 master.menu.flightCrewMember.flightAssignmentMinePlanned = Ver mis asignaciones de vuelo planificadas
 master.menu.flightCrewMember.flightAssignmentMineCompleted = Ver mis asignaciones de vuelo completadas
-
+master.menu.flightCrewMember.dashboard = Panel
 
 # master.menu.technician ##########################################################
 master.menu.technician = Técnico
