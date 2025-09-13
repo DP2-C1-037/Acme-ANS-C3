@@ -39,7 +39,7 @@ import lombok.Setter;
 	@Index(columnList = "flight_id, scheduledDeparture"), // findPreviousLeg
 	@Index(columnList = "flight_id, id, scheduledArrival"), // findOverlappingLegSa
 	@Index(columnList = "flight_id, id, scheduledDeparture"), // findOverlappingLegSd (corregido 'Deparure')
-	@Index(columnList = "scheduledArrival"), @Index(columnList = "scheduledArrival, draftMode")
+	@Index(columnList = "scheduledArrival"), @Index(columnList = "scheduledArrival, draftMode"), @Index(columnList = "draftMode")
 })
 public class Leg extends AbstractEntity {
 
