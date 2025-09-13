@@ -2,11 +2,13 @@
 package acme.features.flightCrewMember.dashboard;
 
 import java.time.LocalDate;
+import java.time.YearMonth;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -89,9 +91,11 @@ public class FlightCrewMemberDashboardShowService extends AbstractGuiService<Fli
 		LocalDate startLocalDate = LocalDate.now().minusMonths(10);
 		Date startDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
-		List<Object[]> counts = this.repository.findMonthlyFlightCounts(memberId, startDate);
+		List<Date> arrivals = this.repository.findFlightAssignmentArrivals(memberId, startDate);
 
-		List<Integer> flightsPerMonth = counts.stream().map(row -> ((Number) row[2]).intValue()).toList();
+		Map<YearMonth, Long> counts = arrivals.stream().map(date -> date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()).collect(Collectors.groupingBy(d -> YearMonth.of(d.getYear(), d.getMonth()), Collectors.counting()));
+
+		List<Integer> flightsPerMonth = counts.values().stream().map(Long::intValue).toList();
 
 		double avg = flightsPerMonth.stream().mapToInt(Integer::intValue).average().orElse(0.0);
 		int min = flightsPerMonth.stream().mapToInt(Integer::intValue).min().orElse(0);
@@ -100,7 +104,7 @@ public class FlightCrewMemberDashboardShowService extends AbstractGuiService<Fli
 		double stdDev = 0.0;
 		if (flightsPerMonth.size() > 1) {
 			double mean = avg;
-			double variance = flightsPerMonth.stream().mapToDouble(n -> Math.pow(n - mean, 2)).sum() / (flightsPerMonth.size() - 1); // muestral
+			double variance = flightsPerMonth.stream().mapToDouble(n -> Math.pow(n - mean, 2)).sum() / (flightsPerMonth.size() - 1);
 			stdDev = Math.sqrt(variance);
 		}
 
