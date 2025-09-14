@@ -101,7 +101,7 @@ public class FlightCrewMemberFlightAssignmentCreateService extends AbstractGuiSe
 
 		member = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
 
-		legs = this.repository.findPublishedFutureOwnedLegs(MomentHelper.getCurrentMoment(), member.getAirline());
+		legs = this.repository.findPublishedFutureOwnedLegs(MomentHelper.getCurrentMoment(), member.getAirline().getId());
 
 		statuses = SelectChoices.from(AssignmentStatus.class, assignment.getStatus());
 		duties = SelectChoices.from(FlightCrewDuty.class, assignment.getFlightCrewDuty());

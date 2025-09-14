@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
 import acme.entities.activityLog.ActivityLog;
-import acme.entities.airline.Airline;
 import acme.entities.flightAssignment.FlightAssignment;
 import acme.entities.leg.Leg;
 
@@ -31,8 +30,8 @@ public interface FlightCrewMemberFlightAssignmentRepository extends AbstractRepo
 	@Query("select fa from FlightAssignment fa where fa.flightCrewMember.id = :memberId and fa.leg.scheduledArrival > :now")
 	Collection<FlightAssignment> findMyPlannedAssignments(Date now, Integer memberId);
 
-	@Query("select l from Leg l where l.draftMode = false and l.scheduledArrival > :now and l.aircraft.airline = :airline")
-	Collection<Leg> findPublishedFutureOwnedLegs(Date now, Airline airline);
+	@Query("select l from Leg l where l.draftMode = false and l.scheduledArrival > :now and l.aircraft.airline.id = :airlineId")
+	Collection<Leg> findPublishedFutureOwnedLegs(Date now, Integer airlineId);
 
 	@Query("select l from Leg l where l.draftMode = false")
 	Collection<Leg> findPublishedLegs();

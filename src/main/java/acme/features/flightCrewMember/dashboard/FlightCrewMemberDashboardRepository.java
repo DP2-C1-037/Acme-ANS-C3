@@ -18,8 +18,8 @@ public interface FlightCrewMemberDashboardRepository extends AbstractRepository 
 	@Query("SELECT fa FROM FlightAssignment fa JOIN fa.leg l WHERE fa.flightCrewMember.id = :flightCrewMemberId ORDER BY l.scheduledArrival DESC")
 	List<FlightAssignment> findFlightAssignments(int flightCrewMemberId, Pageable pageable);
 
-	@Query("SELECT EXTRACT(YEAR FROM fa.leg.scheduledArrival) as year, EXTRACT(MONTH FROM fa.leg.scheduledArrival) as month, COUNT(fa) as flightCount FROM FlightAssignment fa WHERE fa.flightCrewMember.id = :flightCrewMemberId AND fa.leg.scheduledArrival >= :startDate GROUP BY EXTRACT(YEAR FROM fa.leg.scheduledArrival), EXTRACT(MONTH FROM fa.leg.scheduledArrival) ORDER BY year DESC, month DESC")
-	List<Object[]> findMonthlyFlightCounts(int flightCrewMemberId, Date startDate);
+	@Query("SELECT fa.leg.scheduledArrival FROM FlightAssignment fa WHERE fa.flightCrewMember.id = :flightCrewMemberId AND fa.leg.scheduledArrival >= :startDate")
+	List<Date> findFlightAssignmentArrivals(int flightCrewMemberId, Date startDate);
 
 	@Query("SELECT COUNT(al) FROM ActivityLog al WHERE al.flightAssignment.flightCrewMember.id = :memberId AND al.severityLevel >= :minSeverity AND al.severityLevel <= :maxSeverity")
 	Integer countLegsWithSeverity(int memberId, int minSeverity, int maxSeverity);
@@ -32,5 +32,4 @@ public interface FlightCrewMemberDashboardRepository extends AbstractRepository 
 
 	@Query("SELECT COUNT(fa) FROM FlightAssignment fa WHERE fa.flightCrewMember.id = :flightCrewMemberId AND fa.status = :status")
 	int countFlightAssignmentsByStatus(int flightCrewMemberId, AssignmentStatus status);
-
 }
