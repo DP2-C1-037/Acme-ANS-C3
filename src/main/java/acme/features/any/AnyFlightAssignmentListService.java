@@ -35,6 +35,8 @@ public class AnyFlightAssignmentListService extends AbstractGuiService<Any, Flig
 		Dataset dataset;
 		dataset = super.unbindObject(assignment, "lastUpdateMoment", "status");
 		dataset.put("flightNumber", assignment.getLeg().getFlightNumber());
+
+		super.addPayload(dataset, assignment, "remarks");
 		super.getResponse().addData(dataset);
 	}
 }
