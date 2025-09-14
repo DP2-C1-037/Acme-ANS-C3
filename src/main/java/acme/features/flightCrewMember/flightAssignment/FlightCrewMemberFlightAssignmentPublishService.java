@@ -119,7 +119,7 @@ public class FlightCrewMemberFlightAssignmentPublishService extends AbstractGuiS
 	}
 
 	private void validateDutyAssignment(final FlightAssignment flightAssignment) {
-		Collection<FlightAssignment> assignedDuties = this.repository.findFlightAssignmentByLegId(flightAssignment.getLeg().getId());
+		Collection<FlightAssignment> assignedDuties = this.repository.findFlightAssignmentByLegId(flightAssignment.getLeg().getId()).stream().filter(existing -> existing.getId() != flightAssignment.getId()).toList();
 
 		boolean legWithCopilot = assignedDuties.stream().anyMatch(assignment -> assignment.getFlightCrewDuty().equals(FlightCrewDuty.COPILOT));
 		boolean legWithPilot = assignedDuties.stream().anyMatch(assignment -> assignment.getFlightCrewDuty().equals(FlightCrewDuty.PILOT));
