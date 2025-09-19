@@ -43,7 +43,6 @@ public class FlightCrewMemberFlightAssignmentListLegsPlannedService extends Abst
 		Dataset dataset;
 
 		dataset = super.unbindObject(assignment, "lastUpdateMoment", "status", "flightCrewDuty");
-		super.addPayload(dataset, assignment, "remarks");
 
 		super.getResponse().addData(dataset);
 	}

@@ -37,18 +37,19 @@ public class FlightCrewMemberFlightAssignmentPublishService extends AbstractGuiS
 		assignment = this.repository.findFlightAssignmentById(masterId);
 		member = assignment == null ? null : assignment.getFlightCrewMember();
 		status = assignment != null && assignment.isDraftMode() && super.getRequest().getPrincipal().hasRealm(member);
+		;
 
 		if (super.getRequest().getMethod().equals("POST")) {
 			int legId = super.getRequest().getData("leg", int.class);
 			Leg leg = this.repository.findLegById(legId);
 
-			validLeg = legId == 0 || leg != null;
-			if (validLeg && leg != null) {
-				boolean isSameAsAssigned = assignment.getLeg() != null && leg.getId() == assignment.getLeg().getId();
+			if (leg != null) {
+				boolean isSameAsAssigned = assignment != null && leg.getId() == assignment.getLeg().getId();
 				boolean isFuture = MomentHelper.isBefore(MomentHelper.getCurrentMoment(), leg.getScheduledArrival());
-				boolean isMyAirline = leg.getAircraft().getAirline().getId() == member.getAirline().getId();
+				boolean isMyAirline = member != null && leg.getAircraft().getAirline().getId() == member.getAirline().getId();
 				validLeg = !leg.isDraftMode() && isMyAirline && (isFuture || isSameAsAssigned);
-			}
+			} else
+				validLeg = legId == 0;
 			status = status && validLeg;
 		}
 
@@ -112,7 +113,7 @@ public class FlightCrewMemberFlightAssignmentPublishService extends AbstractGuiS
 	private void validateLegCompatibility(final FlightAssignment assignment) {
 		Collection<FlightAssignment> myAssignments = this.repository.findFlightAssignmentsByFlightCrewMemberId(assignment.getFlightCrewMember().getId());
 
-		boolean hasOverlappingLeg = myAssignments.stream().filter(existing -> existing.getId() != assignment.getId()).map(FlightAssignment::getLeg).anyMatch(existingLeg -> this.legIsNotOverlapping(assignment.getLeg(), existingLeg));
+		boolean hasOverlappingLeg = myAssignments.stream().filter(existing -> existing.getId() != assignment.getId()).map(FlightAssignment::getLeg).anyMatch(existingLeg -> this.legIsOverlapping(assignment.getLeg(), existingLeg));
 
 		if (hasOverlappingLeg)
 			super.state(false, "*", "acme.validation.flight-assignment.member-with-overlapping-legs.message");
@@ -123,12 +124,14 @@ public class FlightCrewMemberFlightAssignmentPublishService extends AbstractGuiS
 
 		boolean legWithCopilot = assignedDuties.stream().anyMatch(assignment -> assignment.getFlightCrewDuty().equals(FlightCrewDuty.COPILOT));
 		boolean legWithPilot = assignedDuties.stream().anyMatch(assignment -> assignment.getFlightCrewDuty().equals(FlightCrewDuty.PILOT));
+		boolean isPilot = flightAssignment.getFlightCrewDuty().equals(FlightCrewDuty.PILOT);
+		boolean isCopilot = flightAssignment.getFlightCrewDuty().equals(FlightCrewDuty.COPILOT);
 
-		super.state(!(flightAssignment.getFlightCrewDuty().equals(FlightCrewDuty.PILOT) && legWithPilot), "*", "acme.validation.flight-assignment.leg-has-pilot.message");
-		super.state(!(flightAssignment.getFlightCrewDuty().equals(FlightCrewDuty.COPILOT) && legWithCopilot), "*", "acme.validation.flight-assignment.leg-has-copilot.message");
+		super.state(!(isPilot && legWithPilot), "*", "acme.validation.flight-assignment.leg-has-pilot.message");
+		super.state(!(isCopilot && legWithCopilot), "*", "acme.validation.flight-assignment.leg-has-copilot.message");
 	}
 
-	private boolean legIsNotOverlapping(final Leg newLeg, final Leg existingLeg) {
+	private boolean legIsOverlapping(final Leg newLeg, final Leg existingLeg) {
 		Date newDeparture = newLeg.getScheduledDeparture();
 		Date newArrival = newLeg.getScheduledArrival();
 		Date existingDeparture = existingLeg.getScheduledDeparture();

@@ -40,13 +40,13 @@ public class FlightCrewMemberFlightAssignmentUpdateService extends AbstractGuiSe
 			int legId = super.getRequest().getData("leg", int.class);
 			Leg leg = this.repository.findLegById(legId);
 
-			validLeg = legId == 0 || leg != null;
-			if (validLeg && leg != null) {
-				boolean isSameAsAssigned = assignment != null && assignment.getLeg() != null && leg.getId() == assignment.getLeg().getId();
+			if (leg != null) {
+				boolean isSameAsAssigned = assignment != null && leg.getId() == assignment.getLeg().getId();
 				boolean isFuture = MomentHelper.isBefore(MomentHelper.getCurrentMoment(), leg.getScheduledArrival());
 				boolean isMyAirline = member != null && leg.getAircraft().getAirline().getId() == member.getAirline().getId();
 				validLeg = !leg.isDraftMode() && isMyAirline && (isFuture || isSameAsAssigned);
-			}
+			} else
+				validLeg = legId == 0;
 			status = status && validLeg;
 		}
 
