@@ -44,7 +44,6 @@ public class FlightCrewMemberFlightAssignmentListMyLegsCompletedService extends 
 		Dataset dataset;
 
 		dataset = super.unbindObject(assignment, "lastUpdateMoment", "status", "flightCrewDuty");
-		super.addPayload(dataset, assignment, "remarks");
 
 		super.getResponse().addData(dataset);
 	}
