@@ -29,7 +29,7 @@ flight-assignment-20,CABIN_ATTENDANT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dol
 # leg - standard variations,,,,,,,
 flight-assignment-21,CABIN_ATTENDANT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-01,leg-02
 # flight crew member - standard variations,,,,,,,
-flight-assignment-22,PILOT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-01,leg-22
-flight-assignment-23,COPILOT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-02,leg-22
-flight-assignment-24,LEAD_ATTENDANT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-03,leg-22
-flight-assignment-25,CABIN_ATTENDANT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-04,leg-22
+flight-assignment-22,PILOT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-01,leg-02
+flight-assignment-23,COPILOT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-02,leg-02
+flight-assignment-24,LEAD_ATTENDANT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-03,leg-21
+flight-assignment-25,CABIN_ATTENDANT,2012/07/02 00:00,CONFIRMED,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,flight-crew-member-04,leg-21
