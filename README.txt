@@ -6,7 +6,7 @@ The objective is to create a system that assists airports in managing logistics 
 streamlining operations, and enhancing overall efficiency for both passengers and airlines.
 
 ## Group Information
-Diseño y Pruebas II (Design and Testing II) - C2.037
+Diseño y Pruebas II (Design and Testing II) - C3.040
 
 ## Project Description
 Acme ANS is designed to facilitate the management of airport operations related to charter flights, ensuring 

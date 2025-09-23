@@ -9,5 +9,6 @@
 # they accept any liabilities with respect to them.
 
 - Rafael Corchuelo (corchu@us.es)
-- Adrián Chabrera Rubio (adrcharub@alum.us.es)
+- Miguel Álvarez Raya (migalvray@alum.us.es)
+- Salma El Hakimy (salel@alum.us.es)
 
