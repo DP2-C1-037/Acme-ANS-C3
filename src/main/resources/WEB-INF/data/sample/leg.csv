@@ -28,7 +28,7 @@ leg-13,SHX0013,2100/07/02 00:06,2100/07/02 00:07,LANDED,true,flight-12,airport-1
 leg-14,SHX0014,2025/02/02 04:00,2025/02/02 10:00,ON_TIME,true,flight-17,airport-01,airport-14,aircraft-01
 leg-15,SHX0015,2025/02/02 11:00,2025/02/02 14:00,ON_TIME,false,flight-17,airport-14,airport-09,aircraft-01
 
-leg-16,SHX0016,2025/02/02 04:00,2025/02/02 10:00,ON_TIME,false,flight-18,airport-04,airport-15,aircraft-02
+leg-16,SHX0016,2020/02/02 04:00,2020/02/02 10:00,ON_TIME,false,flight-18,airport-04,airport-15,aircraft-42
 
 leg-17,SHX0017,2025/02/02 4:00,2025/02/02 10:00,ON_TIME,true,flight-20,airport-08,airport-10,aircraft-05
 leg-18,SHX0018,2025/02/02 11:00,2025/02/02 14:00,ON_TIME,true,flight-20,airport-10,airport-32,aircraft-05

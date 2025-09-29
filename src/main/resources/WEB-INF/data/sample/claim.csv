@@ -1,46 +1,46 @@
 key,registrationMoment,passengerEmail,description,type,status,draftMode,key:assistanceAgent,key:leg
 # base entity
-claim-00,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
+claim-00,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
 # registrationMoment - standard variations
-claim-01,2022/01/01 00:00,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-02,2022/01/01 00:01,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-03,2021/10/22 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-04,2021/10/25 23:59,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
+claim-01,2022/01/01 00:00,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-02,2022/01/01 00:01,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-03,2021/10/22 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-04,2021/10/25 23:59,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
 # registrationMoment - no singular values
 # passengerEmail - standard variations
-claim-05,2021/10/24 09:15,a@b.c,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-06,2021/10/24 09:15,short@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-07,2021/10/24 09:15,typical.email-address_123@example.co.uk,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-08,2021/10/24 09:15,very.long.email.address.with.many.parts.and.subdomains@subdomain.example.co.uk,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-09,2021/10/24 09:15,email+with-special_chars@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
+claim-05,2021/10/24 09:15,a@b.c,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-06,2021/10/24 09:15,short@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-07,2021/10/24 09:15,typical.email-address_123@example.co.uk,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-08,2021/10/24 09:15,very.long.email.address.with.many.parts.and.subdomains@subdomain.example.co.uk,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-09,2021/10/24 09:15,email+with-special_chars@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
 # passengerEmail - no singular values
 # description - standard variations
-claim-15,2021/10/24 09:15,user00@example.com,L,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-16,2021/10/24 09:15,user00@example.com,Lo,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-17,2021/10/24 09:15,user00@example.com,Flight delay claim with compensation request,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-18,2021/10/24 09:15,user00@example.com,Flight delay claim with compensation request due to a significant delay experienced on flight AA123. The passenger requests compensation according to EU regulations citing inconvenience missed connections and additional incurred expenses during the trip,FLIGHT_ISSUES,ACCEPTED,true,assistance-agent-01,leg-01
-claim-19,2021/10/24 09:15,user00@example.com,เที่ยวบินล่าช้า ขอค่าชดเชย,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-20,2021/10/24 09:15,user00@example.com,تأخير الرحلة مع طلب تعويض,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-21,2021/10/24 09:15,user00@example.com,航班延误索赔请求,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-22,2021/10/24 09:15,user00@example.com,<marquee>Hacked</marquee>,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-23,2021/10/24 09:15,user00@example.com,<script>alert(‘Hacked!’);</script>,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-24,2021/10/24 09:15,user00@example.com,'' or 'A' = 'A ,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
+claim-15,2021/10/24 09:15,user00@example.com,L,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-16,2021/10/24 09:15,user00@example.com,Lo,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-17,2021/10/24 09:15,user00@example.com,Flight delay claim with compensation request,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-18,2021/10/24 09:15,user00@example.com,Flight delay claim with compensation request due to a significant delay experienced on flight AA123. The passenger requests compensation according to EU regulations citing inconvenience missed connections and additional incurred expenses during the trip,FLIGHT_ISSUES,ACCEPTED,true,assistance-agent-01,leg-22
+claim-19,2021/10/24 09:15,user00@example.com,เที่ยวบินล่าช้า ขอค่าชดเชย,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-20,2021/10/24 09:15,user00@example.com,تأخير الرحلة مع طلب تعويض,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-21,2021/10/24 09:15,user00@example.com,航班延误索赔请求,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-22,2021/10/24 09:15,user00@example.com,<marquee>Hacked</marquee>,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-23,2021/10/24 09:15,user00@example.com,<script>alert(‘Hacked!’);</script>,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-24,2021/10/24 09:15,user00@example.com,'' or 'A' = 'A,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
 # description - no singular values
 # type - standard variations
-claim-25,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-26,2021/10/24 09:15,user00@example.com,Flight delay on AA123,LUGGAGE_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-27,2021/10/24 09:15,user00@example.com,Flight delay on AA123,OTHER_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
+claim-25,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-26,2021/10/24 09:15,user00@example.com,Flight delay on AA123,LUGGAGE_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-27,2021/10/24 09:15,user00@example.com,Flight delay on AA123,OTHER_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
 # type - no singular values
 # status - standard variations
-claim-28,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-01
-claim-29,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,PENDING,false,assistance-agent-01,leg-01
-claim-30,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,DENIED,false,assistance-agent-01,leg-01
-
+claim-28,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-29,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,PENDING,false,assistance-agent-01,leg-22
+claim-30,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,DENIED,false,assistance-agent-01,leg-22
 # draftMode - standard variations
-claim-31,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,PENDING,false,assistance-agent-01,leg-01
-claim-32,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,DENIED,true,assistance-agent-01,leg-01
+claim-31,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,PENDING,false,assistance-agent-01,leg-22
+claim-32,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,DENIED,true,assistance-agent-01,leg-22
 # draftMode - no singular values
-# assistantAgent - standard variations 
-claim-33,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-03
-claim-34,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-02,leg-07
-claim-35,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-03,leg-05
+# assistantAgent and leg - standard variations (because the legs cannot be compatible with all assistance agents. It depends on the airline they are working for)
+claim-33,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-01,leg-22
+claim-34,2021/10/24 09:15,user00@example.com,Flight delay on AA123,FLIGHT_ISSUES,ACCEPTED,false,assistance-agent-02,leg-16
+
+

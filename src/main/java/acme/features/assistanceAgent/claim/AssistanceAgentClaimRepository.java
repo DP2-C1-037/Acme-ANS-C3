@@ -30,11 +30,11 @@ public interface AssistanceAgentClaimRepository extends AbstractRepository {
 	@Query("select a from AssistanceAgent a where a.id = :assistanceAgentId")
 	AssistanceAgent findAssistanceAgentById(int assistanceAgentId);
 
-	@Query("select l from Leg l where l.status <> acme.datatypes.LegStatus.CANCELLED")
-	Collection<Leg> findOccuredLegs();
+	@Query("select l from Leg l where l.draftMode = false")
+	Collection<Leg> findPublishedLegs();
 
 	@Query("select l from Leg l where l.id = :legId")
-	Leg findLegById(int legId);
+	Leg findPublishedLegById(int legId);
 
 	@Query("select t from TrackingLog t where t.claim.id = :claimId")
 	Collection<TrackingLog> findAllTrackingLogsByClaimId(int claimId);

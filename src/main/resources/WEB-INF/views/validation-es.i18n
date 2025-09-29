@@ -101,6 +101,8 @@ acme.validation.airport.code-duplicated.message = El código del aeropuerto ya e
 acme.validation.trackingLog.resolPercentage.message = El porcentaje de resolución debe estar entre 0.0 y 100.0
 acme.validation.trackingLog.status.message = Cuando el porcentaje de resolución es 100.0, el estado debe ser ACCEPTED o DENIED. De lo contrario, el estado debe ser PENDING.
 acme.validation.trackingLog.resolution.message = Cuando el porcentaje de resolución es 100.0, la resolución no puede estar vacía
+acme.validation.trackingLog.moments.message= La fecha de creación no puede ser posterior a la fecha de última actualización.
+acme.validation.trackingLog.resolPercentageOrder.message= El porcentaje de resolución debe ser mayor que el anterior
 
 acme.validation.assistance-agent.employee-code-duplicated.message=El código de empleado debe ser único
 acme.validation.assistance-agent.employee-code-invalid-format.message=El código de empleado debe seguir el patrón: 2-3 letras mayúsculas seguidas de 6 dígitos
