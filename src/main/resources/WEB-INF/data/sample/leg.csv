@@ -8,7 +8,7 @@ leg-01,SHX0001,2100/07/02 00:00,2100/07/02 00:01,ON_TIME,true,flight-01,airport-
 leg-02,SHX0002,2100/07/02 00:00,2100/07/02 00:01,ON_TIME,false,flight-16,airport-02,airport-15,aircraft-02
 
 # scheduledDeparture - standard variations
-leg-03,SHX0003,2000/01/01 00:00,2000/01/01 00:01,ON_TIME,true,flight-02,airport-03,airport-16,aircraft-03
+leg-03,SHX0003,2000/01/01 00:00,2000/01/01 00:01,ON_TIME,false,flight-02,airport-03,airport-16,aircraft-03
 leg-04,SHX0004,2000/01/01 00:01,2100/07/02 00:02,ON_TIME,true,flight-03,airport-04,airport-17,aircraft-04
 leg-05,SHX0005,2200/12/31 23:59,2201/01/01 00:00,ON_TIME,true,flight-04,airport-05,airport-18,aircraft-05
 
