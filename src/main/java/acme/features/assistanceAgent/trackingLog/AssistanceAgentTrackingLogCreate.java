@@ -2,6 +2,7 @@
 package acme.features.assistanceAgent.trackingLog;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -46,34 +47,6 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 		super.getResponse().setAuthorised(status);
 
 	}
-	@Override
-	public void validate(final TrackingLog trackingLog) {
-		if (trackingLog == null || trackingLog.getClaim() == null)
-			return;
-
-		Double currentResol = trackingLog.getResolPercentage();
-		if (currentResol == null)
-			return;
-
-		int claimId = trackingLog.getClaim().getId();
-
-		//  Recuperamos todos los logs ordenados por porcentaje descendente (primero el mayor)
-		var logs = this.repository.findAllTrackingLogsByClaimIdOrderedByResolPercentageDesc(claimId);
-
-		if (!logs.isEmpty()) {
-			TrackingLog highest = logs.iterator().next(); // el primero es el mayor porcentaje
-			boolean valid;
-
-			if (Double.compare(highest.getResolPercentage(), 100.0) == 0 && trackingLog.getCreationMoment() != null && trackingLog.getCreationMoment().after(highest.getCreationMoment()))
-				//  Si ya hubo un 100% y este tracking es posterior → se permite reiniciar desde 0
-				valid = currentResol >= 0.0;
-			else
-				//  En cualquier otro caso, debe ser >= al mayor previo
-				valid = currentResol >= highest.getResolPercentage();
-
-			super.state(valid, "resolPercentage", "acme.validation.trackingLog.resolPercentageOrder.message");
-		}
-	}
 
 	@Override
 	public void load() {
@@ -100,6 +73,47 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 	@Override
 	public void bind(final TrackingLog trackingLog) {
 		super.bindObject(trackingLog, "step", "resolPercentage", "status", "resolution");
+	}
+	@Override
+	public void validate(final TrackingLog trackingLog) {
+		if (!super.getBuffer().getErrors().hasErrors("resolPercentage")) {
+			Claim claim = trackingLog.getClaim();
+
+			// Sacamos todos los logs del claim en orden de creación
+			List<TrackingLog> logs = this.repository.findAllByClaimIdOrderByCreationMomentAsc(claim.getId());
+
+			if (!logs.isEmpty()) {
+
+				// Encontramos el índice del último log publicado al 100%
+				int lastPublished100Index = -1;
+				for (int i = logs.size() - 1; i >= 0; i--) {
+					TrackingLog t = logs.get(i);
+					if (!t.isDraftMode() && t.getResolPercentage() == 100) {
+						lastPublished100Index = i;
+						break;
+					}
+				}
+
+				// Determinamos la lista de logs sobre los que validar
+				List<TrackingLog> logsToCheck;
+				if (lastPublished100Index >= 0)
+					// Caso: hay un 100% publicado
+					logsToCheck = logs.subList(lastPublished100Index + 1, logs.size());
+				else
+					// Caso normal: antes de cualquier 100%
+					logsToCheck = logs;
+
+				if (!logsToCheck.isEmpty()) {
+					// Tomamos el último log de esta lista
+					TrackingLog lastLog = logsToCheck.get(logsToCheck.size() - 1);
+					// El nuevo porcentaje debe ser mayor que el último de la lista
+					if (trackingLog.getResolPercentage() <= lastLog.getResolPercentage())
+						super.getBuffer().getErrors().add("resolPercentage", "El porcentaje debe ser mayor que el último log registrado (" + lastLog.getResolPercentage() + "%)");
+				}
+				// Si no hay logs a validar (primer log post-100% o primer log de todos), no hay restricción
+			}
+			// Si no hay logs previos, tampoco hay restricción
+		}
 	}
 
 	@Override

@@ -2,6 +2,7 @@
 package acme.features.assistanceAgent.trackingLog;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -23,10 +24,10 @@ public interface AssistanceAgentTrackingLogRepository extends AbstractRepository
 	@Query("select c from Claim c where c.id = :claimId")
 	Claim findClaimById(int claimId);
 
-	@Query("select t from TrackingLog t where t.claim.id = :claimId order by t.resolPercentage desc")
-	Collection<TrackingLog> findAllTrackingLogsByClaimIdOrderedByResolPercentageDesc(int claimId);
+	@Query("SELECT t FROM TrackingLog t WHERE t.claim.id = :claimId ORDER BY t.resolPercentage ASC, t.creationMoment ASC")
+	List<TrackingLog> findAllByClaimIdOrderByResolPercentageAscCreationMomentAsc(@Param("claimId") int claimId);
 
-	@Query("select t from TrackingLog t " + "where t.claim.id = :claimId and t.creationMoment <= :currentMoment and t.id <> :trackingLogId " + "order by t.creationMoment desc")
-	TrackingLog findPreviousTrackingLog(@Param("claimId") int claimId, @Param("currentMoment") java.util.Date currentMoment, @Param("trackingLogId") int trackingLogId);
+	@Query("SELECT t FROM TrackingLog t WHERE t.claim.id = :claimId ORDER BY t.creationMoment ASC")
+	List<TrackingLog> findAllByClaimIdOrderByCreationMomentAsc(@Param("claimId") int claimId);
 
 }
