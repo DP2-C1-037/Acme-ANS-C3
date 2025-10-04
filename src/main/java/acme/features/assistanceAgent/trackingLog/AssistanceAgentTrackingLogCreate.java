@@ -1,7 +1,6 @@
 
 package acme.features.assistanceAgent.trackingLog;
 
-import java.util.Collection;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,6 +46,34 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 		super.getResponse().setAuthorised(status);
 
 	}
+	@Override
+	public void validate(final TrackingLog trackingLog) {
+		if (trackingLog == null || trackingLog.getClaim() == null)
+			return;
+
+		Double currentResol = trackingLog.getResolPercentage();
+		if (currentResol == null)
+			return;
+
+		int claimId = trackingLog.getClaim().getId();
+
+		//  Recuperamos todos los logs ordenados por porcentaje descendente (primero el mayor)
+		var logs = this.repository.findAllTrackingLogsByClaimIdOrderedByResolPercentageDesc(claimId);
+
+		if (!logs.isEmpty()) {
+			TrackingLog highest = logs.iterator().next(); // el primero es el mayor porcentaje
+			boolean valid;
+
+			if (Double.compare(highest.getResolPercentage(), 100.0) == 0 && trackingLog.getCreationMoment() != null && trackingLog.getCreationMoment().after(highest.getCreationMoment()))
+				//  Si ya hubo un 100% y este tracking es posterior → se permite reiniciar desde 0
+				valid = currentResol >= 0.0;
+			else
+				//  En cualquier otro caso, debe ser >= al mayor previo
+				valid = currentResol >= highest.getResolPercentage();
+
+			super.state(valid, "resolPercentage", "acme.validation.trackingLog.resolPercentageOrder.message");
+		}
+	}
 
 	@Override
 	public void load() {
@@ -62,6 +89,7 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 
 		trackingLog = new TrackingLog();
 		trackingLog.setClaim(claim);
+		trackingLog.setCreationMoment(currentMoment);
 		trackingLog.setLastUpdateMoment(currentMoment);
 		trackingLog.setDraftMode(true);
 
@@ -75,25 +103,6 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 	}
 
 	@Override
-	public void validate(final TrackingLog trackingLog) {
-		boolean allTrackingLogsPublished;
-		int claimId;
-		Collection<TrackingLog> trackingLogs;
-
-		allTrackingLogsPublished = true;
-		claimId = trackingLog.getClaim().getId();
-		trackingLogs = this.repository.findAllTrackingLogsByClaimId(claimId);
-
-		for (TrackingLog element : trackingLogs)
-			if (element.isDraftMode())
-				allTrackingLogsPublished = false;
-
-		if (!allTrackingLogsPublished)
-			super.state(allTrackingLogsPublished, "*", "assistance-agent.tracking-log.form.error.allTrackingLogsPublished");
-
-	}
-
-	@Override
 	public void perform(final TrackingLog trackingLog) {
 		this.repository.save(trackingLog);
 	}
@@ -103,7 +112,7 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 		Dataset dataset;
 		SelectChoices status;
 
-		dataset = super.unbindObject(trackingLog, "lastUpdateMoment", "step", "resolPercentage", "status", "resolution");
+		dataset = super.unbindObject(trackingLog, "creationMoment", "lastUpdateMoment", "step", "resolPercentage", "status", "resolution");
 		status = SelectChoices.from(TrackingLogStatus.class, trackingLog.getStatus());
 		dataset.put("status", status);
 		dataset.put("claimId", trackingLog.getClaim().getId());

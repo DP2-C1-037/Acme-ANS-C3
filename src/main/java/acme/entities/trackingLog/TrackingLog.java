@@ -66,10 +66,17 @@ public class TrackingLog extends AbstractEntity {
 	@Mandatory
 	@Automapped
 	private boolean				draftMode;
+
+	@Mandatory
+	@ValidMoment(past = true)
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				creationMoment;
+
 	// Relationships ----------------------------------------------------------------------------------------------------
 
 	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
 	private Claim				claim;
+
 }

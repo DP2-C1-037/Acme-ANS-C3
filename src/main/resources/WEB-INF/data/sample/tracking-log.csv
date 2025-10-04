@@ -1,55 +1,64 @@
-key,lastUpdateMoment,step,resolPercentage,status,draftMode,resolution,key:claim
+key,creationMoment,lastUpdateMoment,step,resolPercentage,status,draftMode,resolution,key:claim
 # base entity
-tracking-log-00,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-00,2020/08/01 10:05,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
+
 # lastUpdateMoment - standard variations
-tracking-log-01,2022/01/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-02,2023/04/01 08:01,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-03,2024/02/01 07:02,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-04,2022/01/25 09:03,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-01,2020/08/01 10:05,2022/01/01 10:00,Initial Review,30.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-02,2020/08/01 10:05,2023/04/01 08:01,Initial Review,31.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-03,2020/08/01 10:05,2024/02/01 07:02,Initial Review,32.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-04,2020/08/01 10:05,2022/01/25 09:03,Initial Review,33.0,PENDING,false,Claim received and under initial review,claim-00
 # lastUpdateMoment - no singular values
 # step - standard variations
-tracking-log-05,2021/09/01 10:00,I,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-06,2021/09/01 10:00,In,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-09,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-10,2021/09/01 10:00,Documentation Verification,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-11,2021/09/01 10:00,Agent assessment of claim details and case outcome,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-12,2021/09/01 10:00,โลเร็ม อิปซัม,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-13,2021/09/01 10:00,لوريم إيبسوم,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-14,2021/09/01 10:00,洛伦·伊普森,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-15,2021/09/01 10:00,<marquee>Hacked</marquee>,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-16,2021/09/01 10:00,<script>alert('Hacked!');</script>,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-17,2021/09/01 10:00,' OR 1=1 --,25.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-05,2020/08/01 10:05,2021/09/01 10:00,I,34.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-06,2020/08/01 10:05,2021/09/01 10:00,In,35.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-07,2020/08/01 10:05,2021/09/01 10:00,Initial Review,36.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-08,2020/08/01 10:05,2021/09/01 10:00,Documentation Verification,37.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-09,2020/08/01 10:05,2021/09/01 10:00,Agent assessment of claim details and case outcome,38.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-10,2020/08/01 10:05,2021/09/01 10:00,โลเร็ม อิปซัม,39.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-11,2020/08/01 10:05,2021/09/01 10:00,لوريم إيبسوم,40.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-12,2020/08/01 10:05,2021/09/01 10:00,洛伦·伊普เซν,41.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-13,2020/08/01 10:05,2021/09/01 10:00,<marquee>Hacked</marquee>,42.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-14,2020/08/01 10:05,2021/09/01 10:00,<script>alert('Hacked!');</script>,43.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-15,2020/08/01 10:05,2021/09/01 10:00,' OR 1=1 --,44.0,PENDING,false,Claim received and under initial review,claim-00
 # step - no singular values
 # resolPercentage - standard variations
-tracking-log-18,2021/09/01 10:00,Initial Review,0.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-19,2021/09/01 10:00,Initial Review,10.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-20,2021/09/01 10:00,Initial Review,20.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-21,2021/09/01 10:00,Initial Review,30.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-22,2021/09/01 10:00,Initial Review,40.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-23,2021/09/01 10:00,Initial Review,50.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-25,2021/09/01 10:00,Initial Review,60.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-26,2021/09/01 10:00,Initial Review,70.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-27,2021/09/01 10:00,Initial Review,80.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-28,2021/09/01 10:00,Initial Review,90.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-29,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-30,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-31,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-32,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-33,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-34,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-35,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
-tracking-log-36,2021/09/01 10:00,Initial Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
+tracking-log-16,2020/08/01 10:05,2021/09/01 10:00,Initial Review,45.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-17,2020/08/01 10:05,2021/09/01 10:00,Initial Review,46.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-18,2020/08/01 10:05,2021/09/01 10:00,Initial Review,47.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-19,2020/08/01 10:05,2021/09/01 10:00,Initial Review,48.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-20,2020/08/01 10:05,2021/09/01 10:00,Initial Review,49.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-21,2020/08/01 10:05,2021/09/01 10:00,Initial Review,50.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-22,2020/08/01 10:05,2021/09/01 10:00,Initial Review,51.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-23,2020/08/01 10:05,2021/09/01 10:00,Initial Review,52.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-24,2020/08/01 10:05,2021/09/01 10:00,Initial Review,53.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-25,2020/08/01 10:05,2021/09/01 10:00,Initial Review,54.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-26,2020/08/01 10:05,2021/09/01 10:00,Initial Review,55.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-27,2020/08/01 10:05,2021/09/01 10:00,Initial Review,56.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-28,2020/08/01 10:05,2021/09/01 10:00,Initial Review,57.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-29,2020/08/01 10:05,2021/09/01 10:00,Initial Review,58.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-30,2020/08/01 10:05,2021/09/01 10:00,Initial Review,59.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-31,2020/08/01 10:05,2021/09/01 10:00,Initial Review,60.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-32,2020/08/01 10:05,2021/09/01 10:00,Initial Review,61.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-33,2020/08/01 10:05,2021/09/01 10:00,Initial Review,62.0,PENDING,false,Claim received and under initial review,claim-00
 # claim relationship - standard variations
-tracking-log-37,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-02
-tracking-log-38,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-03
-tracking-log-39,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-04
-tracking-log-40,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-05
+tracking-log-34,2020/08/01 10:05,2021/09/01 10:00,Initial Review,63.0,PENDING,false,Claim received and under initial review,claim-02
+tracking-log-35,2020/08/01 10:05,2021/09/01 10:00,Initial Review,64.0,PENDING,false,Claim received and under initial review,claim-03
+tracking-log-36,2020/08/01 10:05,2021/09/01 10:00,Initial Review,65.0,PENDING,false,Claim received and under initial review,claim-04
+tracking-log-37,2020/08/01 10:05,2021/09/01 10:00,Initial Review,66.0,PENDING,false,Claim received and under initial review,claim-05
 # draftMode - standard variations
-tracking-log-41,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-00
-tracking-log-42,2021/09/01 10:00,Initial Review,25.0,PENDING,true,Claim received and under initial review,claim-00
+tracking-log-38,2020/08/01 10:05,2021/09/01 10:00,Initial Review,67.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-39,2020/08/01 10:05,2021/09/01 10:00,Initial Review,68.0,PENDING,true,Claim received and under initial review,claim-00
 # claim relationship - no singular values
-# Multiple tracking logs for single claim (to show progression)
-tracking-log-43,2021/09/01 10:00,Initial Review,25.0,PENDING,false,Claim received and under initial review,claim-04
-tracking-log-44,2021/09/01 10:00,Documentation Verification,50.0,PENDING,true,"All documentation verified, moving to assessment",claim-04
-tracking-log-45,2021/09/01 10:00,Agent Assessment,75.0,PENDING,false,"Assessment complete, preparing final decision",claim-04
-tracking-log-46,2021/09/01 10:00,Final Decision,100.0,ACCEPTED,true,"Claim approved, compensation of $350 will be processed within 7 business days",claim-04
+
+# creationMoment - standard variations
+tracking-log-40,2020/08/02 11:05,2021/09/01 10:00,Initial Review,69.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-41,2020/08/03 19:51,2021/09/01 10:00,Initial Review,70.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-42,2020/08/04 18:05,2021/09/01 10:00,Initial Review,71,PENDING,false,Claim received and under initial review,claim-00
+
+#status - standard variations
+tracking-log-43,2020/08/05 11:05,2021/09/01 10:00,Final Review,72.0,PENDING,false,Claim received and under initial review,claim-00
+tracking-log-44,2020/08/06 19:51,2021/09/01 10:00,Final Review,100.0,ACCEPTED,false,Claim received and under initial review,claim-00
+tracking-log-45,2020/08/07 18:05,2021/09/01 10:00,Final Review,100,DENIED,false,Claim received and under initial review,claim-02
+
+#status- standard variation
+

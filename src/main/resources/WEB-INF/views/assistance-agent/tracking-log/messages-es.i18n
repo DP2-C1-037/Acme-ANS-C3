@@ -2,6 +2,7 @@
 
 assistance-agent.tracking-log.list.title = Registros de seguimiento
 
+assistance-agent.tracking-log.list.label.creationMoment = Fecha de creación
 assistance-agent.tracking-log.list.label.lastUpdateMoment = Fecha de actualización
 assistance-agent.tracking-log.list.label.step = Paso
 assistance-agent.tracking-log.list.label.status = Estados
@@ -12,6 +13,7 @@ assistance-agent.tracking-log.list.button.create = Crear
 
 assistance-agent.tracking-log.form.title = Registro de seguimiento
 
+assistance-agent.tracking-log.form.label.creationMoment = Fecha de creación
 assistance-agent.tracking-log.form.label.lastUpdateMoment = Fecha de actualización
 assistance-agent.tracking-log.form.label.step = Paso
 assistance-agent.tracking-log.form.label.resolPercentage = Porcentaje de resolución

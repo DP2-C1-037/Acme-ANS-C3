@@ -89,7 +89,7 @@ public class AssistanceAgentClaimPublish extends AbstractGuiService<AssistanceAg
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findOccuredLegs(); // Assuming 'findAll' retrieves all published Legs
+		legs = this.repository.findPublishedLegs(); // Assuming 'findAll' retrieves all published Legs
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
 		status = SelectChoices.from(ClaimStatus.class, claim.getStatus());

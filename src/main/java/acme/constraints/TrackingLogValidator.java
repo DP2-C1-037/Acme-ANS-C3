@@ -1,6 +1,7 @@
 
 package acme.constraints;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.validation.ConstraintValidatorContext;
@@ -32,7 +33,6 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 
 	@Override
 	public boolean isValid(final TrackingLog trackingLog, final ConstraintValidatorContext context) {
-		// HINT: trackingLog can be null
 		assert context != null;
 
 		if (trackingLog == null)
@@ -40,35 +40,28 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 
 		Claim claim = trackingLog.getClaim();
 		List<TrackingLog> trackingLogs = this.claimRepository.getTrackingLogsByResolutionOrder(claim.getId());
-		if (!trackingLogs.isEmpty()) {
-			TrackingLog highestTrackingLog = trackingLogs.get(0);
-			if (trackingLog.getResolPercentage() < highestTrackingLog.getResolPercentage()) {
-				String errorMessage = String.format("Resolution percentage %.2f must be higher than the highest resolution percentage %.2f for claim ID %d", trackingLog.getResolPercentage(), highestTrackingLog.getResolPercentage(), claim.getId());
-				context.disableDefaultConstraintViolation();
-				context.buildConstraintViolationWithTemplate(errorMessage).addPropertyNode("resolPercentage").addConstraintViolation();
-				return false;
-			}
-		}
 
-		boolean result;
-		boolean isNull;
-
-		isNull = trackingLog == null || trackingLog.getResolPercentage() == null || trackingLog.getStatus() == null;
+		boolean isNull = trackingLog.getResolPercentage() == null || trackingLog.getStatus() == null;
 
 		if (!isNull) {
 			{
-				Double resolPercentage;
-				boolean validPercentage;
-
-				resolPercentage = trackingLog.getResolPercentage();
-				validPercentage = resolPercentage >= 0.0 && resolPercentage <= 100.0;
+				Double resolPercentage = trackingLog.getResolPercentage();
+				boolean validPercentage = resolPercentage >= 0.0 && resolPercentage <= 100.0;
 				super.state(context, validPercentage, "resolPercentage", "acme.validation.trackingLog.resolPercentage.message");
 			}
 			{
-				TrackingLogStatus status;
-				boolean validStatus;
+				// Check that current resolPercentage is >= highest previous
+				boolean validGreaterThanPrevious = true;
+				if (!trackingLogs.isEmpty()) {
+					TrackingLog highestTrackingLog = trackingLogs.get(0);
+					validGreaterThanPrevious = trackingLog.getResolPercentage() >= highestTrackingLog.getResolPercentage();
+				}
+				super.state(context, validGreaterThanPrevious, "resolPercentage", "acme.validation.trackingLog.resolPercentageOrder.message");
+			}
 
-				status = trackingLog.getStatus();
+			{
+				TrackingLogStatus status = trackingLog.getStatus();
+				boolean validStatus;
 				if (trackingLog.getResolPercentage() == 100.0)
 					validStatus = status == TrackingLogStatus.ACCEPTED || status == TrackingLogStatus.DENIED;
 				else
@@ -76,20 +69,22 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 				super.state(context, validStatus, "status", "acme.validation.trackingLog.status.message");
 			}
 			{
-				String resolution;
+				String resolution = trackingLog.getResolution();
 				boolean validResolution;
-
-				resolution = trackingLog.getResolution();
 				if (trackingLog.getResolPercentage() == 100.0)
 					validResolution = resolution != null && !resolution.isEmpty();
 				else
 					validResolution = true;
 				super.state(context, validResolution, "resolution", "acme.validation.trackingLog.resolution.message");
 			}
+			{
+				Date creationMoment = trackingLog.getCreationMoment();
+				Date lastUpdateMoment = trackingLog.getLastUpdateMoment();
+				boolean validMoments = creationMoment != null && lastUpdateMoment != null && !creationMoment.after(lastUpdateMoment);
+				super.state(context, validMoments, "lastUpdateMoment", "acme.validation.trackingLog.moments.message");
+			}
 		}
 
-		result = !super.hasErrors(context);
-
-		return result;
+		return !super.hasErrors(context);
 	}
 }

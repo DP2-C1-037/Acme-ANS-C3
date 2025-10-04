@@ -61,13 +61,7 @@ public class AssistanceAgentTrackingLogUpdate extends AbstractGuiService<Assista
 	public void bind(final TrackingLog trackingLog) {
 		super.bindObject(trackingLog, "step", "resolPercentage", "status", "resolution");
 	}
-
-	@Override
-	public void validate(final TrackingLog trackingLog) {
-		if (!trackingLog.isDraftMode())
-			super.state(trackingLog.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.draftMode");
-	}
-
+	
 	@Override
 	public void perform(final TrackingLog trackingLog) {
 		Date currentMoment;

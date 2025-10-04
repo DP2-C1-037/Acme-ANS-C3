@@ -62,7 +62,7 @@ public class AssistanceAgentClaimDelete extends AbstractGuiService<AssistanceAge
 		Leg leg;
 
 		legId = super.getRequest().getData("leg", int.class);
-		leg = this.repository.findLegById(legId);
+		leg = this.repository.findPublishedLegById(legId);
 		claim.setLeg(leg);
 		super.bindObject(claim, "passengerEmail", "description", "type", "status");
 	}

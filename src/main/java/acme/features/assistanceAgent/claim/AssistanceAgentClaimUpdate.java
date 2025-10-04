@@ -47,7 +47,7 @@ public class AssistanceAgentClaimUpdate extends AbstractGuiService<AssistanceAge
 			if (status && super.getRequest().getMethod().equals("POST"))
 				try {
 					int legId = super.getRequest().getData("leg", int.class);
-					Leg leg = this.repository.findLegById(legId);
+					Leg leg = this.repository.findPublishedLegById(legId);
 					if (!(legId == 0 || leg != null))
 						status = false;
 				} catch (Exception e) {
@@ -99,7 +99,7 @@ public class AssistanceAgentClaimUpdate extends AbstractGuiService<AssistanceAge
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findOccuredLegs();
+		legs = this.repository.findPublishedLegs();
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
 		status = SelectChoices.from(ClaimStatus.class, claim.getStatus());

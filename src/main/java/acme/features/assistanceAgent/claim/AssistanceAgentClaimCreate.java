@@ -3,6 +3,7 @@ package acme.features.assistanceAgent.claim;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -40,7 +41,7 @@ public class AssistanceAgentClaimCreate extends AbstractGuiService<AssistanceAge
 		if (status && super.getRequest().getMethod().equals("POST"))
 			try {
 				int legId = super.getRequest().getData("leg", int.class);
-				Leg leg = this.repository.findLegById(legId);
+				Leg leg = this.repository.findPublishedLegById(legId);
 				// Sólo permitimos continuar si legId es 0 o el leg existe
 				if (!(legId == 0 || leg != null))
 					status = false;
@@ -77,7 +78,7 @@ public class AssistanceAgentClaimCreate extends AbstractGuiService<AssistanceAge
 		Leg leg;
 
 		legId = super.getRequest().getData("leg", int.class);
-		leg = this.repository.findLegById(legId);
+		leg = this.repository.findPublishedLegById(legId);
 		claim.setLeg(leg);
 		super.bindObject(claim, "passengerEmail", "description", "type", "status");
 	}
@@ -101,9 +102,11 @@ public class AssistanceAgentClaimCreate extends AbstractGuiService<AssistanceAge
 		SelectChoices types;
 		SelectChoices status;
 		SelectChoices legsChoices;
+		AssistanceAgent assistanceAgent = (AssistanceAgent) super.getRequest().getPrincipal().getActiveRealm();
 
-		Collection<Leg> legs;
-		legs = this.repository.findOccuredLegs();
+		Collection<Leg> allLegs = this.repository.findPublishedLegs();
+
+		List<Leg> legs = allLegs.stream().filter(l -> MomentHelper.isBefore(l.getScheduledArrival(), MomentHelper.getCurrentMoment()) && l.getAircraft().getAirline().equals(assistanceAgent.getAirline())).toList();
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
 		status = SelectChoices.from(ClaimStatus.class, claim.getStatus());
@@ -113,7 +116,11 @@ public class AssistanceAgentClaimCreate extends AbstractGuiService<AssistanceAge
 		dataset.put("types", types);
 		dataset.put("status", status);
 		dataset.put("legs", legsChoices);
-		dataset.put("leg", legsChoices.getSelected().getKey());
+
+		if (legsChoices.getSelected() != null)
+			dataset.put("leg", legsChoices.getSelected().getKey());
+		else
+			dataset.put("leg", "");
 
 		super.getResponse().addData(dataset);
 	}
