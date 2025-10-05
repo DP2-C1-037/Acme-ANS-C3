@@ -49,15 +49,6 @@ public class TrackingLogValidator extends AbstractValidator<ValidTrackingLog, Tr
 				boolean validPercentage = resolPercentage >= 0.0 && resolPercentage <= 100.0;
 				super.state(context, validPercentage, "resolPercentage", "acme.validation.trackingLog.resolPercentage.message");
 			}
-			{
-				// Check that current resolPercentage is >= highest previous
-				boolean validGreaterThanPrevious = true;
-				if (!trackingLogs.isEmpty()) {
-					TrackingLog highestTrackingLog = trackingLogs.get(0);
-					validGreaterThanPrevious = trackingLog.getResolPercentage() >= highestTrackingLog.getResolPercentage();
-				}
-				super.state(context, validGreaterThanPrevious, "resolPercentage", "acme.validation.trackingLog.resolPercentageOrder.message");
-			}
 
 			{
 				TrackingLogStatus status = trackingLog.getStatus();

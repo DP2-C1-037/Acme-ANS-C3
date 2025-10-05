@@ -1,5 +1,3 @@
-# messages-en.i18n
-
 assistance-agent.tracking-log.list.title = Tracking logs
 
 assistance-agent.tracking-log.list.label.creationMoment = Creation moment
@@ -21,11 +19,16 @@ assistance-agent.tracking-log.form.label.status = Status
 assistance-agent.tracking-log.form.label.resolution = Resolution
 
 assistance-agent.tracking-log.form.button.create = Create
-
 assistance-agent.tracking-log.form.button.update = Update
 assistance-agent.tracking-log.form.button.delete = Delete
 assistance-agent.tracking-log.form.button.publish = Publish
 
 assistance-agent.tracking-log.form.error.claimDraftMode = The associated claim must be published
 assistance-agent.tracking-log.form.error.draftMode = You cannot perform this action because the tracking log is published
-assistance-agent.tracking-log.form.error.allTrackingLogsPublished = You cannot create a tracking log if the others are not published. 
+assistance-agent.tracking-log.form.error.allTrackingLogsPublished = You cannot create a tracking log if the others are not published.
+assistance-agent.tracking-log.form.error.resolPercentageNegative = Resolution percentage cannot be negative
+assistance-agent.tracking-log.form.error.resolPercentageOver = Resolution percentage cannot exceed 100%
+assistance-agent.tracking-log.form.error.resolPercentageLowerThanPrevious = Resolution percentage must be greater than the last recorded log
+assistance-agent.tracking-log.form.error.resolPercentageHigherThanNext = Resolution percentage must be lower than the next log
+assistance-agent.tracking-log.form.error.resolPercentageOrder = Resolution percentage must respect the sequence of tracking logs
+assistance-agent.tracking-log.form.error.resolPercentageNull = Resolution percentage cannot be null
