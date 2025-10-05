@@ -46,6 +46,46 @@ public class AssistanceAgentTrackingLogUpdate extends AbstractGuiService<Assista
 	}
 
 	@Override
+	public void validate(final TrackingLog trackingLog) {
+		if (trackingLog == null || trackingLog.getClaim() == null)
+			return;
+
+		Double currentResol = trackingLog.getResolPercentage();
+		if (currentResol == null)
+			return;
+
+		int claimId = trackingLog.getClaim().getId();
+		int trackingLogId = trackingLog.getId();
+		Date creationMoment = trackingLog.getCreationMoment();
+
+		// Obtenemos anterior y siguiente
+		TrackingLog previous = this.repository.findPreviousTrackingLog(claimId, creationMoment, trackingLogId).stream().findFirst().orElse(null);
+
+		TrackingLog next = this.repository.findNextTrackingLog(claimId, creationMoment, trackingLogId).stream().findFirst().orElse(null);
+
+		boolean valid = true;
+
+		if (previous != null && next != null)
+			valid = currentResol >= previous.getResolPercentage() && currentResol <= next.getResolPercentage();
+		else if (previous != null)
+			valid = currentResol >= previous.getResolPercentage();
+		else if (next != null)
+			valid = currentResol <= next.getResolPercentage();
+		else
+			valid = currentResol >= 0.0;
+
+		// Caso especial: si ya hubo uno al 100% y este es posterior → puede reiniciar desde 0
+		var highest = this.repository.findFirstByClaimIdOrderByResolPercentageDesc(claimId);
+		if (highest != null && Double.compare(highest.getResolPercentage(), 100.0) == 0) {
+			boolean isAfterHighest = trackingLog.getCreationMoment().after(highest.getCreationMoment());
+			if (isAfterHighest)
+				valid = true; // se permite reiniciar
+		}
+
+		super.state(valid, "resolPercentage", "acme.validation.trackingLog.resolPercentageOrder.message");
+	}
+
+	@Override
 	public void load() {
 		int trackingLogId;
 		TrackingLog trackingLog;
@@ -61,7 +101,7 @@ public class AssistanceAgentTrackingLogUpdate extends AbstractGuiService<Assista
 	public void bind(final TrackingLog trackingLog) {
 		super.bindObject(trackingLog, "step", "resolPercentage", "status", "resolution");
 	}
-	
+
 	@Override
 	public void perform(final TrackingLog trackingLog) {
 		Date currentMoment;
