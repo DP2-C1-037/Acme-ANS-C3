@@ -78,6 +78,7 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 	public void validate(final TrackingLog trackingLog) {
 		if (!super.getBuffer().getErrors().hasErrors("resolPercentage")) {
 			Claim claim = trackingLog.getClaim();
+<<<<<<< HEAD
 			Double currentResol = trackingLog.getResolPercentage();
 
 			// 1. Validación básica de rango
@@ -94,17 +95,30 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 			List<TrackingLog> logs = this.repository.findAllByClaimIdOrderByCreationMomentAsc(claim.getId());
 
 			if (!logs.isEmpty()) {
+=======
+
+			// Sacamos todos los logs del claim en orden de creación
+			List<TrackingLog> logs = this.repository.findAllByClaimIdOrderByCreationMomentAsc(claim.getId());
+
+			if (!logs.isEmpty()) {
+
+>>>>>>> 55afed216ae80831b3af999f3dfe6d5e82e5a385
 				// Encontramos el índice del último log publicado al 100%
 				int lastPublished100Index = -1;
 				for (int i = logs.size() - 1; i >= 0; i--) {
 					TrackingLog t = logs.get(i);
+<<<<<<< HEAD
 					if (!t.isDraftMode() && Double.compare(t.getResolPercentage(), 100.0) == 0) {
+=======
+					if (!t.isDraftMode() && t.getResolPercentage() == 100) {
+>>>>>>> 55afed216ae80831b3af999f3dfe6d5e82e5a385
 						lastPublished100Index = i;
 						break;
 					}
 				}
 
 				// Determinamos la lista de logs sobre los que validar
+<<<<<<< HEAD
 				List<TrackingLog> logsToCheck = lastPublished100Index >= 0 ? logs.subList(lastPublished100Index + 1, logs.size()) : logs;
 
 				if (!logsToCheck.isEmpty()) {
@@ -116,6 +130,24 @@ public class AssistanceAgentTrackingLogCreate extends AbstractGuiService<Assista
 							super.getBuffer().getErrors().add("resolPercentage", "assistance-agent.tracking-log.form.error.resolPercentageLowerThanPrevious");
 				}
 				// Si logsToCheck está vacío → primer log post-100%, no hay restricción
+=======
+				List<TrackingLog> logsToCheck;
+				if (lastPublished100Index >= 0)
+					// Caso: hay un 100% publicado
+					logsToCheck = logs.subList(lastPublished100Index + 1, logs.size());
+				else
+					// Caso normal: antes de cualquier 100%
+					logsToCheck = logs;
+
+				if (!logsToCheck.isEmpty()) {
+					// Tomamos el último log de esta lista
+					TrackingLog lastLog = logsToCheck.get(logsToCheck.size() - 1);
+					// El nuevo porcentaje debe ser mayor que el último de la lista
+					if (trackingLog.getResolPercentage() <= lastLog.getResolPercentage())
+						super.getBuffer().getErrors().add("resolPercentage", "El porcentaje debe ser mayor que el último log registrado (" + lastLog.getResolPercentage() + "%)");
+				}
+				// Si no hay logs a validar (primer log post-100% o primer log de todos), no hay restricción
+>>>>>>> 55afed216ae80831b3af999f3dfe6d5e82e5a385
 			}
 			// Si no hay logs previos, tampoco hay restricción
 		}
