@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>7</zoom_level>
+  <zoom_level>10</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>112</x>
-      <y>406</y>
-      <w>609</w>
-      <h>91</h>
+      <x>0</x>
+      <y>450</y>
+      <w>870</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 ActivityLog {ValidActivityLog}
 --
-+ registrationMoment: Date {Mandatory, ValidMoment(past = true, max = "2201/01/01 00:00:00"), Temporal(TemporalType.TIMESTAMP)}
++ registrationMoment: Date {Mandatory, ValidMoment(past = true), Temporal(TemporalType.TIMESTAMP)}
 + typeOfIncident: String {Mandatory, ValidString(min = 1, max = 50), Automapped}
-+ description: String {Mandatory, ValidLongText, Automapped}
++ description: String {Mandatory, @ValidString(min = 1, max = 255), Automapped}
 + severityLevel: Integer {Mandatory, ValidNumber(min = 0, max = 10), Automapped}
++ draftMode: boolean {Mandatory, Automapped}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1015</x>
-      <y>252</y>
-      <w>98</w>
-      <h>35</h>
+      <x>1290</x>
+      <y>230</y>
+      <w>140</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 FlightCrewMember
@@ -35,28 +36,29 @@ bg=pink</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>126</x>
-      <y>224</y>
-      <w>588</w>
-      <h>84</h>
+      <x>20</x>
+      <y>190</y>
+      <w>840</w>
+      <h>130</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 FlightAssignment
 --
 + flightCrewDuty: FlightCrewDuty {Mandatory, Valid, Automapped}
-+ lastUpdateMoment: Date {Mandatory, ValidMoment(past = true, min = "2000/01/01 00:00"), Temporal(TemporalType.TIMESTAMP)}
++ lastUpdateMoment: Date {Mandatory, ValidMoment(past = true), Temporal(TemporalType.TIMESTAMP)}
 + status: AssignmentStatus {Mandatory, Valid, Automapped}
 + remarks: String {Optional, ValidString(min = 0, max = 255), Automapped}
++ draftMode: boolean {Mandatory, Automapped}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>413</x>
-      <y>301</y>
-      <w>77</w>
-      <h>119</h>
+      <x>430</x>
+      <y>310</y>
+      <w>110</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>Belongs to ^
 lt=&lt;-x
@@ -64,15 +66,15 @@ m1=1
 m2=*
 
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>707</x>
-      <y>259</y>
-      <w>322</w>
-      <h>42</h>
+      <x>850</x>
+      <y>240</y>
+      <w>460</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>Is assigned to &gt;
 lt=&lt;-x
@@ -85,10 +87,10 @@ m2=*
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1057</x>
-      <y>119</y>
-      <w>70</w>
-      <h>147</h>
+      <x>1350</x>
+      <y>40</y>
+      <w>100</w>
+      <h>210</h>
     </coordinates>
     <panel_attributes>Works for ^
 lt=&lt;-x
@@ -101,10 +103,10 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1022</x>
-      <y>91</y>
-      <w>77</w>
-      <h>35</h>
+      <x>1300</x>
+      <y>0</y>
+      <w>110</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Airline
@@ -114,10 +116,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>378</x>
-      <y>91</y>
-      <w>77</w>
-      <h>35</h>
+      <x>380</x>
+      <y>0</y>
+      <w>110</w>
+      <h>50</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Leg
@@ -127,10 +129,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>413</x>
-      <y>119</y>
-      <w>77</w>
-      <h>119</h>
+      <x>430</x>
+      <y>40</y>
+      <w>110</w>
+      <h>170</h>
     </coordinates>
     <panel_attributes>Belongs to ^
 lt=&lt;-x
@@ -143,10 +145,10 @@ m2=*
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>812</x>
-      <y>336</y>
-      <w>357</w>
-      <h>154</h>
+      <x>1000</x>
+      <y>350</y>
+      <w>510</w>
+      <h>220</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 VisaRequirement
