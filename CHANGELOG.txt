@@ -13,4 +13,4 @@ D02 Added the project's data model.
 D03 Introduced role-based functionalities.
 D04 Added test suites for the functionalities implemented.
 C2 Fixed an issue with passenger deletions and added supplementary functionalities.
-C3 This is the final version of the project, fixing issues related to creating new flight assignments and other problems.
+C3 This is the final version of the project, fixing issues related to creating new flight assignments, creating and updating tracking logs, and other issues related to claims.

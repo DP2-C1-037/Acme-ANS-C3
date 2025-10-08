@@ -1,5 +1,3 @@
-# messages-es.i18n
-
 assistance-agent.tracking-log.list.title = Registros de seguimiento
 
 assistance-agent.tracking-log.list.label.creationMoment = Fecha de creación
@@ -21,7 +19,6 @@ assistance-agent.tracking-log.form.label.status = Estado
 assistance-agent.tracking-log.form.label.resolution = Resolución
 
 assistance-agent.tracking-log.form.button.create = Crear
-
 assistance-agent.tracking-log.form.button.update = Actualizar
 assistance-agent.tracking-log.form.button.delete = Eliminar
 assistance-agent.tracking-log.form.button.publish = Publicar
@@ -29,3 +26,9 @@ assistance-agent.tracking-log.form.button.publish = Publicar
 assistance-agent.tracking-log.form.error.claimDraftMode = La reclamación asociada debe estar publicada
 assistance-agent.tracking-log.form.error.draftMode = No puedes realizar esta acción porque el registro de seguimiento está publicado
 assistance-agent.tracking-log.form.error.allTrackingLogsPublished = No puedes crear un registro de seguimiento si no están los demás publicados
+assistance-agent.tracking-log.form.error.resolPercentageNegative = El porcentaje de resolución no puede ser negativo
+assistance-agent.tracking-log.form.error.resolPercentageOver = El porcentaje de resolución no puede superar el 100%
+assistance-agent.tracking-log.form.error.resolPercentageLowerThanPrevious = El porcentaje de resolución debe ser mayor que el último registro
+assistance-agent.tracking-log.form.error.resolPercentageHigherThanNext = El porcentaje de resolución debe ser menor que el siguiente registro
+assistance-agent.tracking-log.form.error.resolPercentageOrder = El porcentaje de resolución debe respetar el orden de los registros
+assistance-agent.tracking-log.form.error.resolPercentageNull = El porcentaje de resolución no puede estar vacío
