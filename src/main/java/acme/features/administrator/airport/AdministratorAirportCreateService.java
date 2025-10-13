@@ -24,12 +24,7 @@ public class AdministratorAirportCreateService extends AbstractGuiService<Admini
 
 	@Override
 	public void authorise() {
-		boolean status = true;
-		if (super.getRequest().hasData("id", int.class)) {
-			int flightId = super.getRequest().getData("id", int.class);
-			status = flightId == 0;
-		}
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -49,6 +44,14 @@ public class AdministratorAirportCreateService extends AbstractGuiService<Admini
 	@Override
 	public void validate(final Airport airport) {
 		boolean confirmation;
+
+		try {
+			String scopeValue = super.getRequest().getData("operationalScope", String.class);
+			OperationalScope.valueOf(scopeValue);
+		} catch (Exception e) {
+			super.getResponse().setAuthorised(false);
+			return;
+		}
 
 		confirmation = super.getRequest().getData("confirmation", boolean.class);
 		super.state(confirmation, "confirmation", "acme.validation.confirmation.message");
