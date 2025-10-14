@@ -41,8 +41,7 @@ public class AssistanceAgentClaimShow extends AbstractGuiService<AssistanceAgent
 		claimId = super.getRequest().getData("id", int.class);
 		selectedClaim = this.repository.findClaimById(claimId);
 
-		status = principal.hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().getId() == currentAssistanceAgentId;
-
+		status = selectedClaim != null && principal.hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().getId() == currentAssistanceAgentId;
 		super.getResponse().setAuthorised(status);
 	}
 
