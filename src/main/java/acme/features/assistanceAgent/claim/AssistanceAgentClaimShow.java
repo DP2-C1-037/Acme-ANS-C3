@@ -2,12 +2,14 @@
 package acme.features.assistanceAgent.claim;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
 import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.datatypes.ClaimType;
@@ -59,25 +61,34 @@ public class AssistanceAgentClaimShow extends AbstractGuiService<AssistanceAgent
 	@Override
 	public void unbind(final Claim claim) {
 		Dataset dataset;
-		SelectChoices types;
-		SelectChoices status;
+		SelectChoices typesChoices;
+		SelectChoices statusChoices;
 		SelectChoices legsChoices;
+		AssistanceAgent assistanceAgent;
+		Collection<Leg> allLegs;
+		List<Leg> legs;
 
-		Collection<Leg> legs;
-		legs = this.repository.findPublishedLegs();
+		assistanceAgent = (AssistanceAgent) super.getRequest().getPrincipal().getActiveRealm();
 
-		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "status", "draftMode");
-		types = SelectChoices.from(ClaimType.class, claim.getType());
-		status = SelectChoices.from(ClaimStatus.class, claim.getStatus());
+		typesChoices = SelectChoices.from(ClaimType.class, claim.getType());
+		statusChoices = SelectChoices.from(ClaimStatus.class, claim.getStatus());
+
+		allLegs = this.repository.findPublishedLegs();
+		legs = allLegs.stream().filter(l -> MomentHelper.isBefore(l.getScheduledArrival(), MomentHelper.getCurrentMoment()) && l.getAircraft().getAirline().equals(assistanceAgent.getAirline())).toList();
+
 		legsChoices = SelectChoices.from(legs, "flightNumber", claim.getLeg());
 
-		dataset.put("types", types);
-		dataset.put("status", status);
-		dataset.put("legFlightNumber", claim.getLeg().getFlightNumber());
+		dataset = super.unbindObject(claim, "registrationMoment", "passengerEmail", "description", "type", "status", "draftMode");
+
+		dataset.put("types", typesChoices);
+		dataset.put("status", statusChoices);
 		dataset.put("legs", legsChoices);
-		dataset.put("leg", legsChoices.getSelected().getKey());
+
+		if (legsChoices.getSelected() != null)
+			dataset.put("leg", legsChoices.getSelected().getKey());
+		else
+			dataset.put("leg", "");
 
 		super.getResponse().addData(dataset);
 	}
-
 }
