@@ -84,10 +84,7 @@ public class AssistanceAgentClaimShow extends AbstractGuiService<AssistanceAgent
 		dataset.put("status", statusChoices);
 		dataset.put("legs", legsChoices);
 
-		if (legsChoices.getSelected() != null)
-			dataset.put("leg", legsChoices.getSelected().getKey());
-		else
-			dataset.put("leg", "");
+		dataset.put("leg", legsChoices.getSelected().getKey());
 
 		super.getResponse().addData(dataset);
 	}
