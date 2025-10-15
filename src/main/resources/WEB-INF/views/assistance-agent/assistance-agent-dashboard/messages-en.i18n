@@ -1,0 +1,14 @@
+assistance-agent.assistance-agent-dashboard.form.title = Assistance Agent Dashboard
+	
+assistanceAgent.dashboard.form.title.general-indicators = General
+assistanceAgent.dashboard.form.title.log-statistics-indicators = Tracking logs statistics indicators
+assistanceAgent.dashboard.form.title.log-statistics-month-indicators = Tracking logs statistics indicators during the last month
+	
+assistanceAgent.dashboard.form.label.resolved-claims =  Ratio of claims that have been resolved successfully
+assistanceAgent.dashboard.form.label.rejected-claims =  Ratio of claims that have been rejected
+assistanceAgent.dashboard.form.label.top-three-months = Top three months with the highest number of claims
+	
+assistanceAgent.dashboard.form.label.claim-logs-statistics-average = Average
+assistanceAgent.dashboard.form.label.claim-logs-statistics-minimum = Minimum
+assistanceAgent.dashboard.form.label.claim-logs-statistics-maximum = Maximum
+assistanceAgent.dashboard.form.label.claim-logs-statistics-deviation = Deviation

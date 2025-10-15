@@ -30,68 +30,59 @@ public class FlightCrewMemberDashboardShowService extends AbstractGuiService<Fli
 
 	@Override
 	public void authorise() {
-		FlightCrewMember member;
-		boolean status;
-
-		member = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
-		status = super.getRequest().getPrincipal().hasRealm(member);
-
+		FlightCrewMember member = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
+		boolean status = super.getRequest().getPrincipal().hasRealm(member);
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		FlightCrewMemberDashboard dashboard;
-		FlightCrewMember member;
-		int memberId;
+		FlightCrewMemberDashboard dashboard = new FlightCrewMemberDashboard();
+		FlightCrewMember member = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
+		int memberId = member.getId();
 
-		dashboard = new FlightCrewMemberDashboard();
-		member = (FlightCrewMember) super.getRequest().getPrincipal().getActiveRealm();
-		memberId = member.getId();
-
-		dashboard.setLastFiveDestinations(this.fetchLastFiveDestinations(memberId));
-		dashboard.setIncidentCountsBySeverity(this.fetchIncidentCounts(memberId));
-		dashboard.setLastLegCrewMembers(this.fetchLastLegCrewMembers(memberId));
-		dashboard.setFlightAssignmentsByStatus(this.fetchAssignmentsByStatus(memberId));
-		this.setAssignmentStatistics(dashboard, memberId);
+		dashboard.setLastFiveDestinations(this.getRecentDestinations(memberId));
+		dashboard.setIncidentCountsBySeverity(this.getSeverityCounts(memberId));
+		dashboard.setLastLegCrewMembers(this.getOtherCrewMembersInLastLeg(memberId));
+		dashboard.setFlightAssignmentsByStatus(this.getAssignmentsByStatus(memberId));
+		this.calculateAssignmentStatistics(dashboard, memberId);
 
 		super.getBuffer().addData(dashboard);
 	}
 
-	private List<String> fetchLastFiveDestinations(final int memberId) {
-		return this.repository.findLastFiveDestinations(memberId, PageRequest.of(0, 5));
+	private List<String> getRecentDestinations(final int memberId) {
+		return this.repository.findRecentDestinations(memberId, PageRequest.of(0, 5));
 	}
 
-	private Map<String, Integer> fetchIncidentCounts(final int memberId) {
+	private Map<String, Integer> getSeverityCounts(final int memberId) {
 		Map<String, Integer> incidents = new HashMap<>();
-		incidents.put("0-3", this.repository.countLegsWithSeverity(memberId, 0, 3));
-		incidents.put("4-7", this.repository.countLegsWithSeverity(memberId, 4, 7));
-		incidents.put("8-10", this.repository.countLegsWithSeverity(memberId, 8, 10));
-
+		incidents.put("0-3", this.repository.countAssignmentsBySeverityRange(memberId, 0, 3));
+		incidents.put("4-7", this.repository.countAssignmentsBySeverityRange(memberId, 4, 7));
+		incidents.put("8-10", this.repository.countAssignmentsBySeverityRange(memberId, 8, 10));
 		return incidents;
 	}
 
-	private List<String> fetchLastLegCrewMembers(final int memberId) {
-		List<FlightAssignment> lastAssignments = this.repository.findFlightAssignments(memberId, PageRequest.of(0, 1));
+	private List<String> getOtherCrewMembersInLastLeg(final int memberId) {
+		List<FlightAssignment> lastAssignments = this.repository.findAssignmentsByCrewMember(memberId, PageRequest.of(0, 1));
 		if (!lastAssignments.isEmpty()) {
 			FlightAssignment last = lastAssignments.get(0);
-			return this.repository.findLastLegCrewMembers(last.getLeg().getId(), memberId);
+			return this.repository.findOtherCrewMembersInLeg(last.getLeg().getId(), memberId);
 		} else
 			return List.of();
 	}
 
-	private Map<String, Integer> fetchAssignmentsByStatus(final int memberId) {
-		Map<String, Integer> assignmentsByStatus = new HashMap<>();
+	private Map<String, Integer> getAssignmentsByStatus(final int memberId) {
+		Map<String, Integer> assignments = new HashMap<>();
 		for (AssignmentStatus s : AssignmentStatus.values())
-			assignmentsByStatus.put(s.name(), this.repository.countFlightAssignmentsByStatus(memberId, s));
-		return assignmentsByStatus;
+			assignments.put(s.name(), this.repository.countAssignmentsByStatus(memberId, s));
+		return assignments;
 	}
 
-	private void setAssignmentStatistics(final FlightCrewMemberDashboard dashboard, final int memberId) {
+	private void calculateAssignmentStatistics(final FlightCrewMemberDashboard dashboard, final int memberId) {
 		LocalDate startLocalDate = LocalDate.now().minusMonths(10);
-		Date startDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		Date fromDate = Date.from(startLocalDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
 
-		List<Date> arrivals = this.repository.findFlightAssignmentArrivals(memberId, startDate);
+		List<Date> arrivals = this.repository.findUpcomingAssignmentArrivals(memberId, fromDate);
 
 		Map<YearMonth, Long> counts = arrivals.stream().map(date -> date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()).collect(Collectors.groupingBy(d -> YearMonth.of(d.getYear(), d.getMonth()), Collectors.counting()));
 
@@ -118,7 +109,6 @@ public class FlightCrewMemberDashboardShowService extends AbstractGuiService<Fli
 	public void unbind(final FlightCrewMemberDashboard dashboard) {
 		Dataset dataset = super.unbindObject(dashboard, "lastFiveDestinations", "incidentCountsBySeverity", "lastLegCrewMembers", "flightAssignmentsByStatus", "averageFlightAssignments", "minFlightAssignments", "maxFlightAssignments",
 			"stdDevFlightAssignments");
-
 		super.getResponse().addData(dataset);
 	}
 }
