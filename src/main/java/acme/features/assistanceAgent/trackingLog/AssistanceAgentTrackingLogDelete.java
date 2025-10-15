@@ -3,13 +3,10 @@ package acme.features.assistanceAgent.trackingLog;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import acme.client.components.models.Dataset;
 import acme.client.components.principals.Principal;
-import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.entities.trackingLog.TrackingLog;
-import acme.entities.trackingLog.TrackingLogStatus;
 import acme.realms.assistanceAgent.AssistanceAgent;
 
 @GuiService
@@ -66,25 +63,12 @@ public class AssistanceAgentTrackingLogDelete extends AbstractGuiService<Assista
 
 	@Override
 	public void validate(final TrackingLog trackingLog) {
-		if (!trackingLog.isDraftMode())
-			super.state(trackingLog.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.draftMode");
+		// No validation needed for delete
 	}
 
 	@Override
 	public void perform(final TrackingLog trackingLog) {
 		this.repository.delete(trackingLog);
-	}
-	@Override
-	public void unbind(final TrackingLog trackingLog) {
-		Dataset dataset;
-		SelectChoices status;
-
-		dataset = super.unbindObject(trackingLog, "lastUpdateMoment", "step", "resolPercentage", "status", "resolution");
-		status = SelectChoices.from(TrackingLogStatus.class, trackingLog.getStatus());
-		dataset.put("status", status);
-		dataset.put("claimId", trackingLog.getClaim().getId());
-
-		super.getResponse().addData(dataset);
 	}
 
 }
