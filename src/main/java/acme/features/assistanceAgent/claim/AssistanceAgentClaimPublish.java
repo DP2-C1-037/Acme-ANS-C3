@@ -2,12 +2,13 @@
 package acme.features.assistanceAgent.claim;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
-import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
 import acme.client.services.GuiService;
 import acme.datatypes.ClaimType;
@@ -30,18 +31,29 @@ public class AssistanceAgentClaimPublish extends AbstractGuiService<AssistanceAg
 	@Override
 	public void authorise() {
 		boolean status;
-		int currentAssistanceAgentId;
-		int claimId;
-		Claim selectedClaim;
-		Principal principal;
+		Claim claim;
+		int id;
+		AssistanceAgent assistanceAgent;
 
-		principal = super.getRequest().getPrincipal();
+		id = super.getRequest().getData("id", int.class);
+		claim = this.repository.findClaimById(id);
+		assistanceAgent = claim == null ? null : claim.getAssistanceAgent();
 
-		currentAssistanceAgentId = principal.getActiveRealm().getId();
-		claimId = super.getRequest().getData("id", int.class);
-		selectedClaim = this.repository.findClaimById(claimId);
+		String method = super.getRequest().getMethod();
 
-		status = principal.hasRealmOfType(AssistanceAgent.class) && selectedClaim.getAssistanceAgent().getId() == currentAssistanceAgentId && selectedClaim.isDraftMode();
+		if (method.equals("GET"))
+			status = super.getRequest().getPrincipal().hasRealm(assistanceAgent) && claim != null && claim.isDraftMode();
+		else {
+			int legId = super.getRequest().getData("leg", int.class);
+
+			List<Leg> legs = this.repository.findAllLegs().stream().filter(l -> (MomentHelper.isBefore(l.getScheduledArrival(), MomentHelper.getCurrentMoment()) && !l.isDraftMode() && l.getAircraft().getAirline().equals(assistanceAgent.getAirline())))
+				.toList();
+
+			Leg leg = this.repository.findLegById(legId);
+
+			status = (legId == 0 || leg != null && !leg.isDraftMode() && legs.contains(leg)) && super.getRequest().getPrincipal().hasRealm(assistanceAgent) && claim != null && claim.isDraftMode();
+		}
+
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -89,7 +101,7 @@ public class AssistanceAgentClaimPublish extends AbstractGuiService<AssistanceAg
 		SelectChoices legsChoices;
 
 		Collection<Leg> legs;
-		legs = this.repository.findPublishedLegs(); // Assuming 'findAll' retrieves all published Legs
+		legs = this.repository.findPublishedLegs();
 
 		types = SelectChoices.from(ClaimType.class, claim.getType());
 		status = SelectChoices.from(ClaimStatus.class, claim.getStatus());

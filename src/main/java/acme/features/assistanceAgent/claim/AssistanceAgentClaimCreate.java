@@ -8,7 +8,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.models.Dataset;
-import acme.client.components.principals.Principal;
 import acme.client.components.views.SelectChoices;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractGuiService;
@@ -33,21 +32,22 @@ public class AssistanceAgentClaimCreate extends AbstractGuiService<AssistanceAge
 	@Override
 	public void authorise() {
 		boolean status;
-		Principal principal;
+		String method;
+		Leg leg;
+		int legId;
+		AssistanceAgent assistanceAgent = (AssistanceAgent) super.getRequest().getPrincipal().getActiveRealm();
 
-		principal = super.getRequest().getPrincipal();
-		status = principal.hasRealmOfType(AssistanceAgent.class);
+		method = super.getRequest().getMethod();
 
-		if (status && super.getRequest().getMethod().equals("POST"))
-			try {
-				int legId = super.getRequest().getData("leg", int.class);
-				Leg leg = this.repository.findPublishedLegById(legId);
-				// Sólo permitimos continuar si legId es 0 o el leg existe
-				if (!(legId == 0 || leg != null))
-					status = false;
-			} catch (Exception e) {
-				status = false; // Si hay problema al leer el legId o buscar el leg
-			}
+		if (method.equals("GET"))
+			status = true;
+		else {
+			legId = super.getRequest().getData("leg", int.class);
+			leg = this.repository.findValidLegById(assistanceAgent.getAirline(), legId);
+
+			status = legId == 0 || leg != null && !leg.isDraftMode();
+
+		}
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -117,10 +117,7 @@ public class AssistanceAgentClaimCreate extends AbstractGuiService<AssistanceAge
 		dataset.put("status", status);
 		dataset.put("legs", legsChoices);
 
-		if (legsChoices.getSelected() != null)
-			dataset.put("leg", legsChoices.getSelected().getKey());
-		else
-			dataset.put("leg", "");
+		dataset.put("leg", legsChoices.getSelected().getKey());
 
 		super.getResponse().addData(dataset);
 	}

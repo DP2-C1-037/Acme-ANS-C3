@@ -53,4 +53,10 @@ public interface AssistanceAgentTrackingLogRepository extends AbstractRepository
 	List<TrackingLog> findNextTrackingLog(@Param("claimId") int claimId, @Param("creationMoment") Date creationMoment, @Param("id") int id);
 
 	TrackingLog findFirstByClaimIdOrderByResolPercentageDesc(int claimId);
+
+	@Query("select t from TrackingLog t where t.claim.id = :claimId ORDER BY t.resolPercentage DESC")
+	List<TrackingLog> findTrackingLogsByClaimIdOrderedByPercentage(int claimId);
+
+	@Query("select t from TrackingLog t where t.claim.id = :claimId and t.resolPercentage = 100.00")
+	Collection<TrackingLog> findLogsWith100(int claimId);
 }

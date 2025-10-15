@@ -2,6 +2,7 @@
 package acme.features.assistanceAgent.trackingLog;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -65,15 +66,82 @@ public class AssistanceAgentTrackingLogPublish extends AbstractGuiService<Assist
 
 	@Override
 	public void validate(final TrackingLog trackingLog) {
-		Claim claim;
-		claim = trackingLog.getClaim();
 
+		Claim claim = trackingLog.getClaim();
+
+		// Validar que el claim no esté en draft
 		if (claim.isDraftMode())
-			super.state(!claim.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.claimDraftMode");
+			super.state(false, "*", "assistance-agent.tracking-log.form.error.claimDraftMode");
 
-		if (!trackingLog.isDraftMode())
-			super.state(trackingLog.isDraftMode(), "*", "assistance-agent.tracking-log.form.error.draftMode");
+		// Validación básica de porcentaje
+		Double currentResol = trackingLog.getResolPercentage();
+		if (currentResol == null) {
+			super.state(false, "resolPercentage", "assistance-agent.tracking-log.form.error.resolPercentageNull");
+			return;
+		}
+		if (currentResol < 0.0) {
+			super.state(false, "resolPercentage", "assistance-agent.tracking-log.form.error.resolPercentageNegative");
+			return;
+		}
+		if (currentResol > 100.0) {
+			super.state(false, "resolPercentage", "assistance-agent.tracking-log.form.error.resolPercentageOver");
+			return;
+		}
 
+		int claimId = claim.getId();
+		int trackingLogId = trackingLog.getId();
+
+		// Todos los logs del claim ordenados
+		List<TrackingLog> logs = this.repository.findAllTrackingLogsByClaimId(claimId).stream().sorted((a, b) -> {
+			int cmp = a.getCreationMoment().compareTo(b.getCreationMoment());
+			if (cmp == 0)
+				return Integer.compare(a.getId(), b.getId());
+			return cmp;
+		}).toList();
+
+		// --- MISMA LÓGICA DE BLOQUES QUE EN UPDATE ---
+		TrackingLog previousInBlock = null;
+		TrackingLog nextInBlock = null;
+
+		for (int i = 0; i < logs.size(); i++) {
+			TrackingLog t = logs.get(i);
+
+			if (t.getId() == trackingLogId) {
+				// Buscar previous dentro del mismo bloque (antes del siguiente 100%)
+				for (int j = i - 1; j >= 0; j--) {
+					TrackingLog candidate = logs.get(j);
+					if (candidate.getResolPercentage() == 100.0)
+						break;
+					previousInBlock = candidate;
+					break;
+				}
+				// Buscar next dentro del mismo bloque (hasta el siguiente 100%)
+				for (int j = i + 1; j < logs.size(); j++) {
+					TrackingLog candidate = logs.get(j);
+					if (candidate.getResolPercentage() == 100.0)
+						break; // ya se corta el bloque
+					if (nextInBlock == null)
+						nextInBlock = candidate; // el primero tras el actual
+				}
+
+				break;
+			}
+		}
+
+		double min = previousInBlock != null ? previousInBlock.getResolPercentage() : 0.0;
+		double max = nextInBlock != null ? nextInBlock.getResolPercentage() : 100.0;
+
+		boolean valid;
+		if (min == 0.0)
+			valid = currentResol >= min && currentResol <= max;
+		else
+			valid = currentResol > min && currentResol <= max;
+
+		if (!valid)
+			if (previousInBlock != null && currentResol <= previousInBlock.getResolPercentage())
+				super.state(false, "resolPercentage", "assistance-agent.tracking-log.form.error.resolPercentageLowerThanPrevious");
+			else if (nextInBlock != null && currentResol > nextInBlock.getResolPercentage())
+				super.state(false, "resolPercentage", "assistance-agent.tracking-log.form.error.resolPercentageHigherThanNext");
 	}
 
 	@Override
