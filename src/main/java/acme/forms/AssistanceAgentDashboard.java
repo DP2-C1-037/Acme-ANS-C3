@@ -1,10 +1,10 @@
 
 package acme.forms;
 
-import java.util.Date;
 import java.util.List;
 
 import acme.client.components.basis.AbstractForm;
+import acme.datatypes.StatisticsAssistanceAgent;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,19 +18,10 @@ public class AssistanceAgentDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	private Double				successfulClaimsRate;
-	private Double				rejectedClaimsRate;
-
-	private List<Date>			highestClaimMonths;
-
-	private Double				averageTotalClaims;
-	private Integer				minimumTotalClaims;
-	private Integer				maximumTotalClaims;
-	private Double				stdDevTotalClaims;
-
-	private Double				averageMonthlyAssistedClaims;
-	private Integer				minimumMonthlyAssistedClaims;
-	private Integer				maximumMonthlyAssistedClaims;
-	private Double				stdDevMonthlyAssistedClaims;
+	Double						resolvedClaims;
+	Double						rejectedClaims;
+	List<String>				topThreeMonths;
+	StatisticsAssistanceAgent	logsStatistics;
+	StatisticsAssistanceAgent	assistedStatistics;
 
 }

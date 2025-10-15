@@ -71,6 +71,8 @@ master.menu.airlineManager.flight = List my flights
 master.menu.assistance-agent = Assistance agent
 master.menu.assistance-agent.claim.list-completed = Completed claims
 master.menu.assistance-agent.claim.list-undergoing = Undergoing claims
+master.menu.assistance-agent.dashboard = Dashboard
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

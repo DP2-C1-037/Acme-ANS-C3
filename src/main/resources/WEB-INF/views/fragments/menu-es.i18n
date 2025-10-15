@@ -71,6 +71,7 @@ master.menu.airlineManager.flight = Listar mis vuelos
 master.menu.assistance-agent = Agente de asistencia
 master.menu.assistance-agent.claim.list-completed = Reclamaciones completadas
 master.menu.assistance-agent.claim.list-undergoing = Reclamaciones en progreso
+master.menu.assistance-agent.dashboard = Panel
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
